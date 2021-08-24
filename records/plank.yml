@@ -1,4 +1,5 @@
 name: plank
+type: static
 cues:
 - upper arm 90 degrees
 - elbows beneath shoulders

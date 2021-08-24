@@ -1,4 +1,5 @@
 name: pallof press
+type: dynamic
 cues:
 - brace core before motion
 - keep arms level with ground throughout motion

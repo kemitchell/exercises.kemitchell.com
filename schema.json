@@ -2,12 +2,20 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "name"
+    "name",
+    "type",
+    "cues"
   ],
   "properties": {
     "name": {
       "type": "string",
       "minLength": 1
+    },
+    "type": {
+      "enum": [
+        "static",
+        "dynamic"
+      ]
     },
     "cues": {
       "type": "array",
