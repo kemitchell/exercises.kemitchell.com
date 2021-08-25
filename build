@@ -9,9 +9,12 @@ const yaml = require('js-yaml')
 const exerciseFiles = glob.sync('records/*.yml')
 const exercises = new Set()
 const arrays = ['progressions', 'videos', 'regressions']
+let lastUpdated
 for (const file of exerciseFiles) {
   const exercise = yaml.load(fs.readFileSync(file, 'utf8'))
-  exercise.updated = fs.statSync(file).mtime
+  const updated = exercise.updated = fs.statSync(file).mtime
+  if (lastUpdated === undefined) lastUpdated = updated
+  else if (updated > lastUpdated) lastUpdated = updated
   exercise.slug = slugify(exercise.name)
   for (const arrayKey of arrays) {
     if (!Array.isArray(exercise[arrayKey])) exercise[arrayKey] = []
@@ -41,4 +44,4 @@ for (const exercise of exercises.values()) {
 
 const indexPageTemplate = fs.readFileSync('index.html', 'utf8')
 const indexFile = path.join('site', 'index.html')
-fs.writeFileSync(indexFile, ejs.render(indexPageTemplate, Object.assign({}, helpers, { exercises: Array.from(exercises).sort((a, b) => a.name.localeCompare(b.name)) })))
+fs.writeFileSync(indexFile, ejs.render(indexPageTemplate, Object.assign({}, helpers, { exercises: Array.from(exercises).sort((a, b) => a.name.localeCompare(b.name)), updated: lastUpdated })))
