@@ -9,6 +9,9 @@
     <header role=banner>
       <h1><%= name %></h1>
       <p class=type><%= type %> exercise</p>
+      <% if (locals.chain) { %>
+      <p class=chain><%= chain %> chain</p>
+      <% } %>
     </header>
 
     <main role=main>

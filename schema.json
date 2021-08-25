@@ -17,6 +17,12 @@
         "dynamic"
       ]
     },
+    "chain": {
+      "enum": [
+        "open",
+        "closed"
+      ]
+    },
     "muscles": {
       "type": "array",
       "minItems": 1,
@@ -28,7 +34,8 @@
           "internal oblique",
           "external oblique",
           "deltoid",
-          "diceps brachii",
+          "latissimus dorsi",
+          "biceps brachii",
           "brachioradialis",
           "triceps brachii",
           "quadricpes",

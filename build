@@ -22,7 +22,7 @@ for (const file of exerciseFiles) {
   exercises.add(exercise)
 }
 
-// Compute progression backlinks.
+const muscles = new Map()
 for (const exercise of exercises.values()) {
   for (const progressionName of exercise.progressions) {
     const progression = Array.from(exercises).find(exercise => exercise.name === progressionName)
@@ -30,6 +30,11 @@ for (const exercise of exercises.values()) {
       throw new Error(`${exercise.name} referenced unknown progression ${progressionName}`)
     }
     progression.regressions.push(exercise.name)
+  }
+
+  for (const muscle of exercise.muscles) {
+    if (!muscles.has(muscle)) muscles.set(muscle, new Set())
+    muscles.get(muscle).add(exercise.name)
   }
 }
 
@@ -44,4 +49,4 @@ for (const exercise of exercises.values()) {
 
 const indexPageTemplate = fs.readFileSync('index.html', 'utf8')
 const indexFile = path.join('site', 'index.html')
-fs.writeFileSync(indexFile, ejs.render(indexPageTemplate, Object.assign({}, helpers, { exercises: Array.from(exercises).sort((a, b) => a.name.localeCompare(b.name)), updated: lastUpdated })))
+fs.writeFileSync(indexFile, ejs.render(indexPageTemplate, Object.assign({}, helpers, { exercises: Array.from(exercises).sort((a, b) => a.name.localeCompare(b.name)), updated: lastUpdated, muscles })))

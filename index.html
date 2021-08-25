@@ -18,6 +18,22 @@
         </li>
         <% } %>
       </ul>
+
+      <h2 id=muscles>By Muscle</h2>
+      <ul>
+        <% for (const [ muscle, exercises ] of muscles.entries()) { %>
+        <li id="<%= slugify(muscle) %>">
+          <%= muscle %>
+          <ul>
+            <% for (const exerciseName of exercises.values()) { %>
+            <li>
+              <a href="<%= slugify(exerciseName) %>"><%= exerciseName %></a>
+            </li>
+            <% } %>
+          </ul>
+        </li>
+        <% } %>
+      </ul>
     </main>
 
     <footer role=contentinfo>

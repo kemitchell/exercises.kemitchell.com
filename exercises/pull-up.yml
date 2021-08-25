@@ -1,5 +1,9 @@
 name: pull-up
 type: dynamic
+chain: closed
 cues:
   - pause at bottom
   - pause at top
+muscles:
+  - latissimus dorsi
+  - biceps brachii
