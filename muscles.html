@@ -9,7 +9,8 @@
       <h1>muscles</h1>
 
       <ul>
-        <% for (const [ muscle, exercises ] of muscles.entries()) { %>
+        <% for (const muscle of Array.from(muscles.keys()).sort()) { %>
+        <% const exercises = muscles.get(muscle) %>
         <li id="<%= slugify(muscle) %>">
           <%= muscle %>
           <ul>

@@ -9,7 +9,8 @@
       <h1>tags</h1>
 
       <ul>
-        <% for (const [ tag, exercises ] of tags.entries()) { %>
+        <% for (const tag of Array.from(tags.keys()).sort()) { %>
+        <% const exercises = tags.get(tag) %>
         <li id="<%= slugify(tag) %>">
           <%= tag %>
           <ul>
