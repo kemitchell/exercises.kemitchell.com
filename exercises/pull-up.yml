@@ -1,6 +1,7 @@
 name: pull-up
 type: dynamic
 chain: closed
+tags: [military]
 cues:
   - hands pronated
   - pause at bottom

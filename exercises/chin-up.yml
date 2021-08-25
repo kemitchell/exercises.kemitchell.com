@@ -1,5 +1,6 @@
 name: chin-up
 type: dynamic
 chain: closed
+tags: [military]
 cues:
   - hands supinated
