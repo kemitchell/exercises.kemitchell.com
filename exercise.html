@@ -15,7 +15,7 @@
     </header>
 
     <main role=main>
-      <h2 id=cues>Cues</h2>
+      <h2 id=cues>cues</h2>
       <ul>
         <% for (const cue of cues) { %>
         <li><%= cue %></li>
@@ -23,7 +23,7 @@
       </ul>
 
       <% if (muscles.length) { %>
-      <h2 id=muscles>Muscles</h2>
+      <h2 id=muscles>muscles</h2>
       <ul>
         <% for (const muscle of muscles) { %>
         <li><a href="/muscles#<%= slugify(muscle) %>"><%= muscle %></a></li>
@@ -32,7 +32,7 @@
       <% } %>
 
       <% if (videos.length) { %>
-      <h2 id=videos>Videos</h2>
+      <h2 id=videos>videos</h2>
       <ul>
         <% for (const video of videos) { %>
         <li>
@@ -43,7 +43,7 @@
       <% } %>
 
       <% if (progressions.length) { %>
-      <h2 id=progressions>Progressions</h2>
+      <h2 id=progressions>progressions</h2>
       <ul>
         <% for (const progression of progressions) { %>
         <li>
@@ -54,7 +54,7 @@
       <% } %>
 
       <% if (regressions.length) { %>
-      <h2 id=regressions>Regressions</h2>
+      <h2 id=regressions>regressions</h2>
       <ul>
         <% for (const regression of regressions) { %>
         <li>
