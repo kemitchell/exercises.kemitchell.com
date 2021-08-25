@@ -21,8 +21,35 @@
       "type": "array",
       "minItems": 1,
       "items": {
-        "type": "string",
-        "format": "url"
+        "anyOf": [
+          {
+            "type": "string",
+            "format": "url"
+          },
+          {
+            "type": "object",
+            "required": [
+              "url",
+              "source"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "url"
+              },
+              "source": {
+                "enum": [
+                  "Tykato Fitness",
+                  "Fitness FAQs",
+                  "CrossFit",
+                  "Calisthenic Movement",
+                  "Antranik"
+                ]
+              }
+            }
+          }
+        ]
       }
     },
     "cues": {
