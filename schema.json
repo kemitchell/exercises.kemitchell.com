@@ -92,6 +92,14 @@
         "minLength": 1
       }
     },
+    "tags": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z]+$"
+      }
+    },
     "progressions": {
       "type": "array",
       "minItems": 1,

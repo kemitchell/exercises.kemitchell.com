@@ -8,7 +8,7 @@ const yaml = require('js-yaml')
 
 const exerciseFiles = glob.sync('exercises/*.yml')
 const exercises = new Set()
-const arrays = ['progressions', 'videos', 'regressions', 'muscles']
+const arrays = ['progressions', 'videos', 'regressions', 'muscles', 'tags']
 let lastUpdated
 for (const file of exerciseFiles) {
   const exercise = yaml.load(fs.readFileSync(file, 'utf8'))
@@ -22,6 +22,7 @@ for (const file of exerciseFiles) {
   exercises.add(exercise)
 }
 
+const tags = new Map()
 const muscles = new Map()
 for (const exercise of exercises.values()) {
   for (const progressionName of exercise.progressions) {
@@ -35,6 +36,11 @@ for (const exercise of exercises.values()) {
   for (const muscle of exercise.muscles) {
     if (!muscles.has(muscle)) muscles.set(muscle, new Set())
     muscles.get(muscle).add(exercise.name)
+  }
+
+  for (const tag of exercise.tags) {
+    if (!tags.has(tag)) tags.set(tag, new Set())
+    tags.get(tag).add(exercise.name)
   }
 }
 
@@ -54,3 +60,7 @@ fs.writeFileSync(indexFile, ejs.render(indexPageTemplate, Object.assign({}, help
 const musclesPageTemplate = fs.readFileSync('muscles.html', 'utf8')
 const musclesFile = path.join('site', 'muscles.html')
 fs.writeFileSync(musclesFile, ejs.render(musclesPageTemplate, Object.assign({}, helpers, { updated: lastUpdated, muscles })))
+
+const tagsPageTemplate = fs.readFileSync('tags.html', 'utf8')
+const tagsFile = path.join('site', 'tags.html')
+fs.writeFileSync(tagsFile, ejs.render(tagsPageTemplate, Object.assign({}, helpers, { updated: lastUpdated, tags })))

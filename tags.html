@@ -3,18 +3,18 @@
   <head>
     <meta charset=UTF-8>
     <meta name=viewport content="width=device-width, initial-scale=1">
-    <title>muscles</title>
+    <title>tags</title>
   </head>
   <body>
     <header role=banner>
-      <h1>muscles</h1>
+      <h1>tags</h1>
     </header>
 
     <main role=main>
       <ul>
-        <% for (const [ muscle, exercises ] of muscles.entries()) { %>
-        <li id="<%= slugify(muscle) %>">
-          <%= muscle %>
+        <% for (const [ tag, exercises ] of tags.entries()) { %>
+        <li id="<%= slugify(tag) %>">
+          <%= tag %>
           <ul>
             <% for (const exerciseName of exercises.values()) { %>
             <li>
