@@ -17,6 +17,25 @@
         "dynamic"
       ]
     },
+    "muscles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "pectoralis major",
+          "rectus abdominis",
+          "transverse abdominis",
+          "internal oblique",
+          "external oblique",
+          "deltoid",
+          "diceps brachii",
+          "brachioradialis",
+          "triceps brachii",
+          "quadricpes",
+          "hamstrings"
+        ]
+      }
+    },
     "videos": {
       "type": "array",
       "minItems": 1,

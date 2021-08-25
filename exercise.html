@@ -19,6 +19,15 @@
         <% } %>
       </ul>
 
+      <% if (muscles.length) { %>
+      <h2 id=muscles>Muscles</h2>
+      <ul>
+        <% for (const muscle of muscles) { %>
+        <li><%= muscle %></li>
+        <% } %>
+      </ul>
+      <% } %>
+
       <% if (videos.length) { %>
       <h2 id=videos>Videos</h2>
       <ul>
