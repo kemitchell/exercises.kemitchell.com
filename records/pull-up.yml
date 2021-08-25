@@ -1,0 +1,5 @@
+name: pull-up
+type: dynamic
+cues:
+  - pause at bottom
+  - pause at top
