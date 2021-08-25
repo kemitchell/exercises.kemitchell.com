@@ -1,18 +1,12 @@
 <!doctype html>
 <html lang=en-US>
   <head>
-    <meta charset=UTF-8>
-    <meta name=viewport content="width=device-width, initial-scale=1">
     <title>exercises</title>
+    <%- include('meta.html') %>
   </head>
   <body>
-    <header role=banner>
-      <h1>exercises</h1>
-    </header>
-
-    <%- include('nav.html') %>
-
     <main role=main>
+      <h1>exercises</h1>
       <ul>
         <% for (const exercise of exercises) { %>
         <li>
@@ -21,6 +15,8 @@
         <% } %>
       </ul>
     </main>
+
+    <%- include('nav.html') %>
 
     <footer role=contentinfo>
       <p class=updated>last updated <%= updated.toISOString() %></p>

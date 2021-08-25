@@ -1,20 +1,17 @@
 <!doctype html>
 <html lang=en-US>
   <head>
-    <meta charset=UTF-8>
-    <meta name=viewport content="width=device-width, initial-scale=1">
     <title><%= name %></title>
+    <%- include('meta.html') %>
   </head>
   <body>
-    <header role=banner>
+    <main role=main>
       <h1><%= name %></h1>
       <p class=type><%= type %> exercise</p>
       <% if (locals.chain) { %>
       <p class=chain><%= chain %> chain</p>
       <% } %>
-    </header>
 
-    <main role=main>
       <h2 id=cues>cues</h2>
       <ul>
         <% for (const cue of cues) { %>
