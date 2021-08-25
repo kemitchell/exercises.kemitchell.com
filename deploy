@@ -3,6 +3,5 @@ SITE=exercises.kemitchell.com
 if [ ! -d node_modules ]; then
   npm ci --silent --no-progress
 fi
-rm -rf site
 ./build | tee build.log
 rsync -a --delete site/ "$SITE:/var/www/$SITE"
