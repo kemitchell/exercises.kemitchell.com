@@ -1,4 +1,4 @@
-main[role=main],
-footer[role=contentinfo] {
-  max-width: 40rem;
+main[role=main], footer[role=contentinfo] {
+  max-width: 33rem;
+  margin: 0 auto;
 }

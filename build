@@ -56,7 +56,6 @@ for (const exercise of exercises.values()) {
   }
 }
 
-fs.mkdirSync('site', { recursive: true })
 const exercisePageTemplate = fs.readFileSync('exercise.html', 'utf8')
 const views = ['./partials']
 
