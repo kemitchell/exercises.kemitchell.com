@@ -1,0 +1,44 @@
+#!/usr/bin/env node
+const slugify = require('slugify')
+const ejs = require('ejs')
+const fs = require('fs')
+const path = require('path')
+const glob = require('glob')
+const yaml = require('js-yaml')
+
+const exerciseFiles = glob.sync('records/*.yml')
+const exercises = new Set()
+const arrays = ['progressions', 'videos', 'regressions']
+for (const file of exerciseFiles) {
+  const exercise = yaml.load(fs.readFileSync(file, 'utf8'))
+  exercise.updated = fs.statSync(file).mtime
+  exercise.slug = slugify(exercise.name)
+  for (const arrayKey of arrays) {
+    if (!Array.isArray(exercise[arrayKey])) exercise[arrayKey] = []
+  }
+  exercises.add(exercise)
+}
+
+// Compute progression backlinks.
+for (const exercise of exercises.values()) {
+  for (const progressionName of exercise.progressions) {
+    const progression = Array.from(exercises).find(exercise => exercise.name === progressionName)
+    if (!progression) {
+      throw new Error(`${exercise.name} referenced unknown progression ${progressionName}`)
+    }
+    progression.regressions.push(exercise.name)
+  }
+}
+
+fs.mkdirSync('site', { recursive: true })
+const exercisePageTemplate = fs.readFileSync('exercise.html', 'utf8')
+
+const helpers = { slugify }
+for (const exercise of exercises.values()) {
+  const pagePath = path.join('site', `${exercise.slug}.html`)
+  fs.writeFileSync(pagePath, ejs.render(exercisePageTemplate, Object.assign({}, helpers, exercise)))
+}
+
+const indexPageTemplate = fs.readFileSync('index.html', 'utf8')
+const indexFile = path.join('site', 'index.html')
+fs.writeFileSync(indexFile, ejs.render(indexPageTemplate, Object.assign({}, helpers, { exercises: Array.from(exercises).sort((a, b) => a.name.localeCompare(b.name)) })))

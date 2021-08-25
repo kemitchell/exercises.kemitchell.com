@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang=en-US>
+  <head>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title><%= name %></title>
+  </head>
+  <body>
+    <header role=banner>
+      <h1><%= name %></h1>
+      <p class=type><%= type %> exercise</p>
+    </header>
+
+    <main role=main>
+      <h2 id=cues>Cues</h2>
+      <ul>
+        <% for (const cue of cues) { %>
+        <li><%= cue %></li>
+        <% } %>
+      </ul>
+
+      <% if (videos.length) { %>
+      <h2 id=videos>Videos</h2>
+      <ul>
+        <% for (const video of videos) { %>
+        <li>
+          <a href="<%= video.url %>"><%= video.source %></a>
+        </li>
+        <% } %>
+      </ul>
+      <% } %>
+
+      <% if (progressions.length) { %>
+      <h2 id=progressions>Progressions</h2>
+      <ul>
+        <% for (const progression of progressions) { %>
+        <li>
+          <a href="<%= slugify(progression) %>"><%= progression %></a>
+        </li>
+        <% } %>
+      </ul>
+      <% } %>
+
+      <% if (regressions.length) { %>
+      <h2 id=regressions>Regressions</h2>
+      <ul>
+        <% for (const regression of regressions) { %>
+        <li>
+          <a href="<%= slugify(regression) %>"><%= regression %></a>
+        </li>
+        <% } %>
+      </ul>
+      <% } %>
+    </main>
+
+    <footer role=contentinfo>
+      <p class=updated>last updated <%= updated.toISOString() %></p>
+    </footer>
+  </body>
+</html>

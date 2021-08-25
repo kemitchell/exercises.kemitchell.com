@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang=en-US>
+  <head>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Exercises</title>
+  </head>
+  <body>
+    <header role=banner>
+      <h1>Exercises</h1>
+    </header>
+
+    <main role=main>
+      <ul>
+        <% for (const exercise of exercises) { %>
+        <li>
+          <a href="<%= slugify(exercise.name) %>"><%= exercise.name %></a>
+        </li>
+        <% } %>
+      </ul>
+    </main>
+
+    <footer role=contentinfo>
+    </footer>
+  </body>
+</html>
