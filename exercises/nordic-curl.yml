@@ -1,0 +1,5 @@
+name: nordic curl
+type: dynamic
+chain: closed
+cues:
+  - keep back straight
