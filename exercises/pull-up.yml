@@ -5,5 +5,31 @@ cues:
   - pause at bottom
   - pause at top
 muscles:
+  # extension, adduction, and transverse abduction of the shoulder
   - latissimus dorsi
+  - deltoid
+  - pectoralis major
+  - teres major
+  - teres minor
+  - infraspinatus
+  - triceps brachii
+  - coracobrachialis
+  # adduction and inferior rotation of the scapula
+  - trapezius
+  - levator scapulae
+  - rhomboids
+  - pectoralis minor
+  # flexion of the elbow
   - biceps brachii
+  - brachialis
+  - brachioradialis
+  # isometric flexion of the fingers
+  - flexor digitorum profundus
+  - flexor digitorum superficialis
+  - flexor pollicis longus
+  - flexor pollicis brevis
+  - flexor digiti minimi brevis
+  # isometric anti-extension and anti-rotation of the spine
+  - rectus abdominis
+  - internal oblique
+  - external oblique
