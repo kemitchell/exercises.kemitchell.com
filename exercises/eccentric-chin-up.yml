@@ -3,5 +3,6 @@ type: dynamic
 chain: closed
 cues:
   - hands supinated
+muscles: chin-up
 progressions:
   - chin-up

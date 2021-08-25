@@ -24,38 +24,45 @@
       ]
     },
     "muscles": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "enum": [
-          "biceps brachii",
-          "brachialis",
-          "brachioradialis",
-          "coracobrachialis",
-          "deltoid",
-          "external oblique",
-          "flexor digiti minimi brevis",
-          "flexor digitorum profundus",
-          "flexor digitorum superficialis",
-          "flexor pollicis brevis",
-          "flexor pollicis longus",
-          "hamstrings",
-          "infraspinatus",
-          "internal oblique",
-          "latissimus dorsi",
-          "levator scapulae",
-          "pectoralis major",
-          "pectoralis minor",
-          "quadricpes",
-          "rectus abdominis",
-          "rhomboids",
-          "teres major",
-          "teres minor",
-          "transverse abdominis",
-          "trapezius",
-          "triceps brachii"
-        ]
-      }
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "biceps brachii",
+              "brachialis",
+              "brachioradialis",
+              "coracobrachialis",
+              "deltoid",
+              "external oblique",
+              "flexor digiti minimi brevis",
+              "flexor digitorum profundus",
+              "flexor digitorum superficialis",
+              "flexor pollicis brevis",
+              "flexor pollicis longus",
+              "hamstrings",
+              "infraspinatus",
+              "internal oblique",
+              "latissimus dorsi",
+              "levator scapulae",
+              "pectoralis major",
+              "pectoralis minor",
+              "quadricpes",
+              "rectus abdominis",
+              "rhomboids",
+              "teres major",
+              "teres minor",
+              "transverse abdominis",
+              "trapezius",
+              "triceps brachii"
+            ]
+          }
+        }
+      ]
     },
     "videos": {
       "type": "array",

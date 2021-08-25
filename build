@@ -17,7 +17,7 @@ for (const file of exerciseFiles) {
   else if (updated > lastUpdated) lastUpdated = updated
   exercise.slug = slugify(exercise.name)
   for (const arrayKey of arrays) {
-    if (!Array.isArray(exercise[arrayKey])) exercise[arrayKey] = []
+    if (exercise[arrayKey] === undefined) exercise[arrayKey] = []
   }
   exercises.add(exercise)
 }
@@ -25,6 +25,16 @@ for (const file of exerciseFiles) {
 const tags = new Map()
 const muscles = new Map()
 for (const exercise of exercises.values()) {
+  // Inherit muscles list from another exercise.
+  if (typeof exercise.muscles === 'string') {
+    const from = Array.from(exercises).find(other => other.name === exercise.muscles)
+    if (!from) {
+      throw new Error(`${exercise.name} inherited muscles from unknown exercise ${exercise.muscles}`)
+    }
+    exercise.muscles = from.muscles
+  }
+
+  // Create regressions links.
   for (const progressionName of exercise.progressions) {
     const progression = Array.from(exercises).find(exercise => exercise.name === progressionName)
     if (!progression) {
@@ -33,11 +43,13 @@ for (const exercise of exercises.values()) {
     progression.regressions.push(exercise.name)
   }
 
+  // Index by muscles.
   for (const muscle of exercise.muscles) {
     if (!muscles.has(muscle)) muscles.set(muscle, new Set())
     muscles.get(muscle).add(exercise.name)
   }
 
+  // Index by tags.
   for (const tag of exercise.tags) {
     if (!tags.has(tag)) tags.set(tag, new Set())
     tags.get(tag).add(exercise.name)

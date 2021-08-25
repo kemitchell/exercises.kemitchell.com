@@ -2,5 +2,6 @@ name: eccentric pull-up
 type: dynamic
 cues:
   - same as for pull-up
+muscles: pull-up
 progressions:
   - pull-up
