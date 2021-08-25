@@ -1,4 +1,5 @@
 name: rings push-up
+type: dynamic
 cues:
 - back straight
 - posterior pelvic tilt
@@ -12,4 +13,4 @@ videos:
 - url: https://www.youtube.com/watch?v=dSRY2IHqOsI
   source: Tykato Fitness
 - url: https://www.youtube.com/watch?v=FRiiZRhapeU
-  sourcE: CrossFit
+  source: CrossFit
