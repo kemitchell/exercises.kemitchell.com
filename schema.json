@@ -17,6 +17,14 @@
         "dynamic"
       ]
     },
+    "videos": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "format": "url"
+      }
+    },
     "cues": {
       "type": "array",
       "minItems": 1,
