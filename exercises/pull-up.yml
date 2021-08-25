@@ -2,6 +2,7 @@ name: pull-up
 type: dynamic
 chain: closed
 cues:
+  - hands pronated
   - pause at bottom
   - pause at top
 muscles:
