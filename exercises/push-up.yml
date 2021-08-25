@@ -1,5 +1,6 @@
 name: push-up
 type: dynamic
+tags: [apft]
 cues:
   - keep back straight
   - touch chest to floor at bottom
