@@ -12,7 +12,7 @@
     "tape": "^5.2.2"
   },
   "scripts": {
-    "build": "./build",
+    "build": "./build && ./tidy",
     "test": "node test.js"
   }
 }
