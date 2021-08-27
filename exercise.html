@@ -47,6 +47,7 @@
         <% for (const video of videos) { %>
         <li>
           <a href="<%= video.url %>"><%= video.source %></a>
+          <% if (video.url.includes('youtube') || video.url.includes('youtu.be')) { %>(YouTube)<% } %>
         </li>
         <% } %>
       </ul>
