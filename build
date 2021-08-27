@@ -76,3 +76,12 @@ fs.writeFileSync(musclesFile, ejs.render(musclesPageTemplate, Object.assign({}, 
 const tagsPageTemplate = fs.readFileSync('tags.html', 'utf8')
 const tagsFile = path.join('site', 'tags.html')
 fs.writeFileSync(tagsFile, ejs.render(tagsPageTemplate, Object.assign({}, helpers, { updated: lastUpdated, tags }), { views }))
+
+const redirectPageTemplate = fs.readFileSync('redirect.html', 'utf8')
+const redirects = yaml.load(fs.readFileSync('redirects.yml', 'utf8'))
+for (const redirect of redirects) {
+  const fromSlug = slugify(redirect.from)
+  const toSlug = slugify(redirect.to)
+  const redirectFile = path.join('site', `${fromSlug}.html`)
+  fs.writeFileSync(redirectFile, ejs.render(redirectPageTemplate, Object.assign({}, helpers, { url: `/${toSlug}`, name: redirect.to }), { views }))
+}
