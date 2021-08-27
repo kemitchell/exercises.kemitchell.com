@@ -1,0 +1,3 @@
+#!/bin/sh
+set -e
+tidy -modify -indent --indent-spaces 2 -quiet --tidy-mark no --wrap 0 --hide-comments site/*.html

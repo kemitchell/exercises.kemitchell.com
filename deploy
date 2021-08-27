@@ -4,4 +4,5 @@ if [ ! -d node_modules ]; then
   npm ci --silent --no-progress
 fi
 ./build | tee build.log
+./tidy
 rsync -a --delete site/ "$SITE:/var/www/$SITE"
