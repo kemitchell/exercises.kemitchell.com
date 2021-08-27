@@ -1,5 +1,6 @@
 name: bent elbow false grip hold
 type: static
+tags: [arms]
 cues:
   - bend elbows ninety degrees
 progressions:

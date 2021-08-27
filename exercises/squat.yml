@@ -1,5 +1,6 @@
 name: squat
 type: dynamic
+tags: [legs]
 cues:
   - calves touch thighs at bottom
 progressions:

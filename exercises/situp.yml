@@ -1,5 +1,5 @@
 name: situp
 type: dynamic
-tags: [apft]
+tags: [apft, core]
 cues:
   - full range of motion

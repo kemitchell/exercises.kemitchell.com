@@ -1,6 +1,7 @@
 name: eccentric chin-up
 type: dynamic
 chain: closed
+tags: [back]
 cues:
   - hands supinated
 muscles: chin-up

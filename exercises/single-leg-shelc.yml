@@ -1,5 +1,6 @@
 name: single-leg leg extension with leg curl
 type: dynamic
+tags: [legs]
 cues:
   - move foot to middle of the ball
   - bend non-working leg

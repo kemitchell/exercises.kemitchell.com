@@ -1,5 +1,6 @@
 name: false grip hold
 type: static
+tags: [arms]
 cues:
 - arms straight
 - wrist over wring

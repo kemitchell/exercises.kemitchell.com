@@ -1,5 +1,6 @@
 name: eccentric pull-up
 type: dynamic
+tags: [back, arms]
 cues:
   - same as for pull-up
 muscles: pull-up
