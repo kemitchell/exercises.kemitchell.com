@@ -4,3 +4,11 @@ footer[role=contentinfo] {
   margin: 0 auto;
   max-width: 33rem;
 }
+
+a[href] {
+  text-decoration: none;
+}
+
+a[href]:hover {
+  text-decoration: underline;
+}
