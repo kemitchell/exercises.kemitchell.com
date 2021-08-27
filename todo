@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+const fs = require('fs')
+const glob = require('glob')
+const yaml = require('js-yaml')
+
+const exerciseFiles = glob.sync('exercises/*.yml')
+for (const file of exerciseFiles) {
+  const exercise = yaml.load(fs.readFileSync(file, 'utf8'))
+  if (exercise.todo) {
+    process.stdout.write(file)
+    process.stdout.write('\t')
+    process.stdout.write(exercise.name)
+    process.stdout.write('\n')
+  }
+}
