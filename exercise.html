@@ -52,6 +52,17 @@
       </ul>
       <% } %>
 
+      <% if (alternatives.length) { %>
+      <h2 id=alternatives>alternatives</h2>
+      <ul>
+        <% for (const alternative of alternatives) { %>
+        <li>
+          <a href="<%= slugify(alternative) %>"><%= alternative %></a>
+        </li>
+        <% } %>
+      </ul>
+      <% } %>
+
       <% if (regressions.length) { %>
       <h2 id=regressions>regressions</h2>
       <ul>

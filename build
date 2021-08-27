@@ -8,7 +8,7 @@ const yaml = require('js-yaml')
 
 const exerciseFiles = glob.sync('exercises/*.yml')
 const exercises = new Set()
-const arrays = ['progressions', 'videos', 'regressions', 'muscles', 'tags', 'references']
+const arrays = ['progressions', 'videos', 'regressions', 'muscles', 'tags', 'references', 'alternatives']
 let lastUpdated
 for (const file of exerciseFiles) {
   const exercise = yaml.load(fs.readFileSync(file, 'utf8'))
@@ -42,6 +42,18 @@ for (const exercise of exercises.values()) {
     }
     progression.regressions.push(exercise.name)
   }
+
+  // Create alternatives links.
+  for (const alternativeName of exercise.alternatives) {
+    const alternative = Array.from(exercises).find(exercise => exercise.name === alternativeName)
+    if (!alternative) {
+      throw new Error(`${exercise.name} referenced unknown alternative ${alternativeName}`)
+    }
+    if (!alternative.alternatives.includes(exercise.name)) {
+      alternative.alternatives.push(exercise.name)
+    }
+  }
+
 
   // Index by muscles.
   for (const muscle of exercise.muscles) {
