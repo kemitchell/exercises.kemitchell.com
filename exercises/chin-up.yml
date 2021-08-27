@@ -4,3 +4,5 @@ chain: closed
 tags: [military, arms, chest, core, pull]
 cues:
   - hands supinated
+alternatives:
+  - pull-up
