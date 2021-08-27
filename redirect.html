@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang=en-US>
+  <head>
+    <title>redirect</title>
+    <%- include('meta.html') %>
+    <meta http-equiv="refresh" content="0; URL=<%= url %>">
+  </head>
+  <body>
+    <%- include('nav.html') %>
+
+    <main role=main>
+      <p>See <a href="<%= url %>"><%= name %></a>.</p>
+    </main>
+  </body>
+</html>
