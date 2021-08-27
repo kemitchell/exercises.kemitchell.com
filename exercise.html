@@ -50,23 +50,23 @@
       </ul>
       <% } %>
 
-      <% if (progressions.length) { %>
-      <h2 id=progressions>progressions</h2>
-      <ul>
-        <% for (const progression of progressions) { %>
-        <li>
-          <a href="<%= slugify(progression) %>"><%= progression %></a>
-        </li>
-        <% } %>
-      </ul>
-      <% } %>
-
       <% if (regressions.length) { %>
       <h2 id=regressions>regressions</h2>
       <ul>
         <% for (const regression of regressions) { %>
         <li>
           <a href="<%= slugify(regression) %>"><%= regression %></a>
+        </li>
+        <% } %>
+      </ul>
+      <% } %>
+
+      <% if (progressions.length) { %>
+      <h2 id=progressions>progressions</h2>
+      <ul>
+        <% for (const progression of progressions) { %>
+        <li>
+          <a href="<%= slugify(progression) %>"><%= progression %></a>
         </li>
         <% } %>
       </ul>
