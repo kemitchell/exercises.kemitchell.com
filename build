@@ -56,26 +56,31 @@ for (const exercise of exercises.values()) {
   }
 }
 
+const htmlFiles = glob.sync(path.join('site', '*.html'))
+for (const htmlFile of htmlFiles) {
+  fs.unlinkSync(htmlFile)
+}
+
 const exercisePageTemplate = fs.readFileSync('exercise.html', 'utf8')
 const views = ['./partials']
 
 const helpers = { slugify }
 for (const exercise of exercises.values()) {
   const pagePath = path.join('site', `${exercise.slug}.html`)
-  fs.writeFileSync(pagePath, ejs.render(exercisePageTemplate, Object.assign({}, helpers, exercise), { views }))
+  writeFile(pagePath, ejs.render(exercisePageTemplate, Object.assign({}, helpers, exercise), { views }))
 }
 
 const indexPageTemplate = fs.readFileSync('index.html', 'utf8')
 const indexFile = path.join('site', 'index.html')
-fs.writeFileSync(indexFile, ejs.render(indexPageTemplate, Object.assign({}, helpers, { exercises: Array.from(exercises).sort((a, b) => a.name.localeCompare(b.name)), updated: lastUpdated, muscles }), { views }))
+writeFile(indexFile, ejs.render(indexPageTemplate, Object.assign({}, helpers, { exercises: Array.from(exercises).sort((a, b) => a.name.localeCompare(b.name)), updated: lastUpdated, muscles }), { views }))
 
 const musclesPageTemplate = fs.readFileSync('muscles.html', 'utf8')
 const musclesFile = path.join('site', 'muscles.html')
-fs.writeFileSync(musclesFile, ejs.render(musclesPageTemplate, Object.assign({}, helpers, { updated: lastUpdated, muscles }), { views }))
+writeFile(musclesFile, ejs.render(musclesPageTemplate, Object.assign({}, helpers, { updated: lastUpdated, muscles }), { views }))
 
 const tagsPageTemplate = fs.readFileSync('tags.html', 'utf8')
 const tagsFile = path.join('site', 'tags.html')
-fs.writeFileSync(tagsFile, ejs.render(tagsPageTemplate, Object.assign({}, helpers, { updated: lastUpdated, tags }), { views }))
+writeFile(tagsFile, ejs.render(tagsPageTemplate, Object.assign({}, helpers, { updated: lastUpdated, tags }), { views }))
 
 const redirectPageTemplate = fs.readFileSync('redirect.html', 'utf8')
 const redirects = yaml.load(fs.readFileSync('redirects.yml', 'utf8'))
@@ -83,5 +88,9 @@ for (const redirect of redirects) {
   const fromSlug = slugify(redirect.from)
   const toSlug = slugify(redirect.to)
   const redirectFile = path.join('site', `${fromSlug}.html`)
-  fs.writeFileSync(redirectFile, ejs.render(redirectPageTemplate, Object.assign({}, helpers, { url: `/${toSlug}`, name: redirect.to }), { views }))
+  writeFile(redirectFile, ejs.render(redirectPageTemplate, Object.assign({}, helpers, { url: `/${toSlug}`, name: redirect.to }), { views }))
+}
+
+function writeFile (file, text) {
+  fs.writeFileSync(file, text, { flag: 'wx' })
 }
