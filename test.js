@@ -5,12 +5,12 @@ const glob = require('glob')
 const tape = require('tape')
 const yaml = require('js-yaml')
 
-const schema = require('./schema')
+const schema = require('./data/schema')
 const ajv = new AJV()
 addFormats(ajv)
 const validate = ajv.compile(schema)
 
-const recordFiles = glob.sync('exercises/*.yml')
+const recordFiles = glob.sync('data/exercises/*.yml')
 const exercises = new Map()
 for (const recordFile of recordFiles) {
   tape(recordFile, test => {

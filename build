@@ -6,7 +6,7 @@ const path = require('path')
 const glob = require('glob')
 const yaml = require('js-yaml')
 
-const exerciseFiles = glob.sync('exercises/*.yml')
+const exerciseFiles = glob.sync('data/exercises/*.yml')
 const exercises = new Set()
 const arrays = ['progressions', 'videos', 'regressions', 'muscles', 'tags', 'references', 'alternatives']
 let lastUpdated
@@ -96,7 +96,7 @@ writeFile(musclesFile, ejs.render(templates.muscles, Object.assign({}, helpers, 
 const tagsFile = path.join('site', 'tags.html')
 writeFile(tagsFile, ejs.render(templates.tags, Object.assign({}, helpers, { updated: lastUpdated, tags }), { views }))
 
-const redirects = yaml.load(fs.readFileSync('redirects.yml', 'utf8'))
+const redirects = yaml.load(fs.readFileSync('data/redirects.yml', 'utf8'))
 for (const redirect of redirects) {
   const fromSlug = slugify(redirect.from)
   const toSlug = slugify(redirect.to)
