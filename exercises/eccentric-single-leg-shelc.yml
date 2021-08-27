@@ -1,6 +1,6 @@
 name: eccentric single-leg supine leg extension with leg curl
 type: dynamic
-tags: [legs]
+tags: [legs, pull]
 cues:
   - raise with both legs
   - do eccentric with just one working leg

@@ -1,6 +1,6 @@
 name: one-arm pull-up
 type: dynamic
-tags: [back, arms]
+tags: [back, arms, pull]
 chain: closed
 cues:
   - one arm down by side

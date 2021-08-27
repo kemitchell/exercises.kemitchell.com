@@ -1,7 +1,7 @@
 name: archer pull-up
 type: dynamic
 chain: closed
-tags:  [back]
+tags:  [back, pull]
 muscles: pull-up
 cues:
   - one hand placed very far aside
