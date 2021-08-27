@@ -8,6 +8,9 @@ muscles: eccentric nordic curl
 videos:
   - url: https://www.youtube.com/watch?v=G_TN0VRcxSw
     source: Will Levy
+references:
+  - url: http://willlevy.com/the-shelc-and-the-nordic-hamstring-curl/
+    source: Will Levy
 goal:
   sets: 4
   repetitions: 15

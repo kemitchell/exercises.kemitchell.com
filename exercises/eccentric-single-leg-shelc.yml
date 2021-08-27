@@ -11,5 +11,8 @@ goal:
 videos:
   - url: https://www.youtube.com/watch?v=G_TN0VRcxSw
     source: Will Levy
+references:
+  - url: http://willlevy.com/the-shelc-and-the-nordic-hamstring-curl/
+    source: Will Levy
 progressions:
   - single-leg leg extension with leg curl

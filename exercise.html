@@ -28,6 +28,17 @@
       </ul>
       <% } %>
 
+      <% if (references.length) { %>
+      <h2 id=references>references</h2>
+      <ul>
+        <% for (const reference of references) { %>
+        <li>
+          <a href="<%= reference.url %>"><%= reference.source %></a>
+        </li>
+        <% } %>
+      </ul>
+      <% } %>
+
       <% if (videos.length) { %>
       <h2 id=videos>videos</h2>
       <ul>
