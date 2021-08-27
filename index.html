@@ -5,6 +5,8 @@
     <%- include('meta.html') %>
   </head>
   <body>
+    <%- include('nav.html') %>
+
     <main role=main>
       <h1>exercises</h1>
       <ul>
@@ -15,8 +17,6 @@
         <% } %>
       </ul>
     </main>
-
-    <%- include('nav.html') %>
 
     <footer role=contentinfo>
       <p class=updated>last updated <%= updated.toISOString() %></p>
