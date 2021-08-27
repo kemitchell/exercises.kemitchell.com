@@ -34,6 +34,7 @@
           "items": {
             "enum": [
               "biceps brachii",
+              "biceps femoris",
               "brachialis",
               "brachioradialis",
               "coracobrachialis",
@@ -54,6 +55,8 @@
               "quadricpes",
               "rectus abdominis",
               "rhomboids",
+              "semimembranosus",
+              "semitendinosus",
               "teres major",
               "teres minor",
               "transverse abdominis",
