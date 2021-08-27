@@ -3,5 +3,7 @@ type: dynamic
 chain: closed
 cues:
   - keep back straight
+muscles:
+  - hamstrings
 progressions:
   - nordic curl
