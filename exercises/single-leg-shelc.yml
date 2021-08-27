@@ -1,0 +1,17 @@
+name: single-leg leg extension with leg curl
+type: dynamic
+cues:
+  - move foot to middle of the ball
+  - bend non-working leg
+  - raise with one working leg
+  - lower with the working leg
+  - full hip extension
+goal:
+  repetitions: 4
+  sets: 8
+  note: per side
+videos:
+  - url: https://www.youtube.com/watch?v=G_TN0VRcxSw
+    source: Will Levy
+progressions:
+  - nordic curl

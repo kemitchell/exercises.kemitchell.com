@@ -81,15 +81,34 @@
           },
           "source": {
             "enum": [
-              "Tykato Fitness",
-              "Fitness FAQs",
-              "CrossFit",
+              "Antranik",
               "Calisthenic Movement",
-              "Antranik"
+              "CrossFit",
+              "Fitness FAQs",
+              "Tykato Fitness",
+              "Will Levy"
             ]
           }
         }
       }
+    },
+    "goal": {
+      "type": "object",
+      "properties": {
+        "repetitions": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sets": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
     },
     "cues": {
       "type": "array",

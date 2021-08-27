@@ -1,0 +1,14 @@
+name: supine leg extension with leg curl
+type: dynamic
+cues:
+  - heels over top of stability ball
+  - keep hips up, back completely straight
+  - bend knees, bringing ball toward buttocks
+videos:
+  - url: https://www.youtube.com/watch?v=G_TN0VRcxSw
+    source: Will Levy
+goal:
+  sets: 4
+  repetitions: 15
+progressions:
+  - eccentric single-leg supline leg extension with leg curl

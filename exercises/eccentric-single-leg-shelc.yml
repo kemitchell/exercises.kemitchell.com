@@ -1,0 +1,15 @@
+name: eccentric single-leg supline leg extension with leg curl
+type: dynamic
+cues:
+  - raise with both legs
+  - do eccentric with just one working leg
+  - bend the non-working leg during the eccentric movement
+  - bend non-working leg
+goal:
+  repetitions: 10
+  note: per side
+videos:
+  - url: https://www.youtube.com/watch?v=G_TN0VRcxSw
+    source: Will Levy
+progressions:
+  - single-leg leg extension with leg curl
