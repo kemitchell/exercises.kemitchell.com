@@ -3,3 +3,6 @@ type: dynamic
 chain: closed
 cues:
   - keep back straight
+videos:
+  - url: https://www.youtube.com/watch?v=FfnUG6G5UHc
+    source: Will Levy
