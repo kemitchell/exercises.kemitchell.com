@@ -18,3 +18,7 @@ a[href]:hover {
   color: red;
   padding: 0 0.5rem;
 }
+
+.todo a[href] {
+  color: darkred;
+}
