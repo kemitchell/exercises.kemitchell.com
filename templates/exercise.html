@@ -23,6 +23,10 @@
       <p class=chain><%= chain %> chain</p>
       <% } %>
 
+      <% if (locals.todo) { %>
+      <aside class=todo><p>This exercise needs more data.</p></aside>
+      <% } %>
+
       <h2 id=cues>cues</h2>
       <ul>
         <% for (const cue of cues) { %>
