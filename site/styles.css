@@ -14,7 +14,7 @@ a[href]:hover {
 }
 
 .todo {
-  border: 1px solid darkred;
-  color: darkred;
-  padding: 0.25rem;
+  border: 1px solid red;
+  color: red;
+  padding: 0 0.5rem;
 }
