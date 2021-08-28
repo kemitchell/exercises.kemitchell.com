@@ -16,6 +16,7 @@ for (const file of exerciseFiles) {
   if (lastUpdated === undefined) lastUpdated = updated
   else if (updated > lastUpdated) lastUpdated = updated
   exercise.slug = slugify(exercise.name)
+  exercise.file = file
   for (const arrayKey of arrays) {
     if (exercise[arrayKey] === undefined) exercise[arrayKey] = []
   }
@@ -81,10 +82,10 @@ for (const templateFile of templateFiles) {
 }
 const views = ['./partials']
 
-const helpers = { slugify }
+const helpers = { slugify, github: 'https://github.com/kemitchell/exercises.kemitchell.com' }
 for (const exercise of exercises.values()) {
   const pagePath = path.join('site', `${exercise.slug}.html`)
-  writeFile(pagePath, ejs.render(templates.exercise, Object.assign({}, helpers, exercise), { views }))
+  writeFile(pagePath, ejs.render(templates.exercise, Object.assign({ file: exercise.file }, helpers, exercise), { views }))
 }
 
 const indexFile = path.join('site', 'index.html')

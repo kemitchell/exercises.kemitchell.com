@@ -20,7 +20,7 @@
       <h1><%= name %></h1>
 
       <% if (locals.todo) { %>
-      <aside class=todo><p>This exercise needs more data.</p></aside>
+      <aside class=todo><p>This exercise <a href="<%= github %>/edit/main/<%= file %>">needs more data</a>.</p></aside>
       <% } %>
 
       <p class=type><%= type %> exercise</p>
