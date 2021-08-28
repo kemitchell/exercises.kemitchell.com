@@ -17,11 +17,12 @@
     <%- include('nav.html') %>
 
     <main role=main>
+      <h1><%= name %></h1>
+
       <% if (locals.todo) { %>
       <aside class=todo><p>This exercise needs more data.</p></aside>
       <% } %>
 
-      <h1><%= name %></h1>
       <p class=type><%= type %> exercise</p>
       <% if (locals.chain) { %>
       <p class=chain><%= chain %> chain</p>
