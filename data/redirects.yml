@@ -2,3 +2,5 @@
   to: diamond push-up
 - from: squat
   to: bodyweight squat
+- from: eccentric single-leg supine leg extension with leg curl
+  to: two-leg-concentric, one-leg-eccentric leg extension with leg curl
