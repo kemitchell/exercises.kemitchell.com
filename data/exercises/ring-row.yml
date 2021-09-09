@@ -1,5 +1,11 @@
 name: ring row
 type: dynamic
 tags: [arms, back, pull]
+muscles:
+  - latissimus dorsi
+  - rhomboids
+  - trapezius
+  - deltoid
+  - biceps brachii
 cues:
 - keep elbows in
