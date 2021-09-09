@@ -2,10 +2,17 @@ name: ring row
 type: dynamic
 tags: [arms, back, pull]
 muscles:
-  - latissimus dorsi
-  - rhomboids
-  - trapezius
-  - deltoid
-  - biceps brachii
+- latissimus dorsi
+- rhomboids
+- trapezius
+- deltoid
+- biceps brachii
 cues:
 - keep elbows in
+- start at bottom by retracting shoulder blades
+- keep shoulder blades retracted
+- keep body straight
+- do not shrug shoulders at top
+- no momentum (kipping) from hips
+progressions:
+- front lever ring row
