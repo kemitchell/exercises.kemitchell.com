@@ -2,16 +2,16 @@ name: rings push-up
 type: dynamic
 tags: [arms, chest, core, push]
 cues:
-- back straight
-- posterior pelvic tilt
-- turn rings out at top
-- feet together
-- neck neutral
-- turn rings in slightly at bottom
-- spread shoulder blades apart at top
-- squeeze shoulder blades together at bottom
+  - back straight
+  - posterior pelvic tilt
+  - turn rings out at top
+  - feet together
+  - neck neutral
+  - turn rings in slightly at bottom
+  - spread shoulder blades apart at top
+  - squeeze shoulder blades together at bottom
 videos:
-- url: https://www.youtube.com/watch?v=dSRY2IHqOsI
-  source: Tykato Fitness
-- url: https://www.youtube.com/watch?v=FRiiZRhapeU
-  source: CrossFit
+  - url: https://www.youtube.com/watch?v=dSRY2IHqOsI
+    source: Tykato Fitness
+  - url: https://www.youtube.com/watch?v=FRiiZRhapeU
+    source: CrossFit

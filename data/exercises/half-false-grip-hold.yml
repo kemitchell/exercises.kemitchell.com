@@ -2,7 +2,7 @@ name: half false grip hold
 type: static
 tags: [arms, hold]
 cues:
-- one hand in false grip
-- one hand in standard grip
+  - one hand in false grip
+  - one hand in standard grip
 progressions:
   - false grip hold

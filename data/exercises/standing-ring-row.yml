@@ -3,6 +3,6 @@ type: dynamic
 tags: [arms, back, pull]
 muscles: ring row
 cues:
-- focus on scapular retraction
+  - focus on scapular retraction
 progressions:
-- incline ring row
+  - incline ring row
