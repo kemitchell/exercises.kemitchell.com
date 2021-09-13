@@ -1,0 +1,12 @@
+name: arched pull-up
+type: dynamic
+chain: closed
+tags: [military, back, arms, pull]
+cues:
+  - arch back
+muscles: pull-up
+alternatives:
+  - pull-up
+videos:
+  - url: https://www.youtube.com/watch?v=MhokcbRLP5w
+    source: Fitness FAQs
