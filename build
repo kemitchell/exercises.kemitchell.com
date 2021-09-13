@@ -55,7 +55,6 @@ for (const exercise of exercises.values()) {
     }
   }
 
-
   // Index by muscles.
   for (const muscle of exercise.muscles) {
     if (!muscles.has(muscle)) muscles.set(muscle, new Set())

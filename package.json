@@ -9,9 +9,11 @@
   "devDependencies": {
     "ajv": "^8.6.1",
     "ajv-formats": "^2.1.1",
+    "standard": "^16.0.3",
     "tape": "^5.2.2"
   },
   "scripts": {
+    "lint": "standard",
     "build": "./build && ./tidy",
     "test": "node test.js"
   }
