@@ -3,7 +3,23 @@ type: dynamic
 chain: closed
 tags: [military, back, arms, pull]
 cues:
-  - hands pronated
+  - pronate arms
+  - fingers over bar without pinching top of palm
+  - look up, without extending chin at the top
+  - don't cross legs
+  - start from active hang at bottom
+  - depress shoulders
+  - retract shoulder blades
+  - fully extend arms at bottom
+  - drive elbows down toward body
+  - don't smash into joints at the bottom
+  - touch bar to chest
+  - full range of motion
+  - full extension of arms at bottom
+  - avoid momentum, kipping, swinging
+  - control the descent
+  - pull evenly with both sides
+  - arch back
   - pause at bottom
   - pause at top
 muscles:
@@ -37,3 +53,12 @@ muscles:
   - external oblique
 progressions:
   - archer pull-up
+videos:
+  - url: https://www.youtube.com/watch?v=BHsa1yeRugg
+    source: Michael Eckert
+  - url: https://www.youtube.com/watch?v=hkBcTOa21oQ
+    source: Calisthenic Movement
+  #- url: https://www.youtube.com/watch?v=XB_7En-zf_M
+  #  source: Fitness FAQs
+  - url: https://www.youtube.com/watch?v=eGo4IYlbE5g
+    source: Calisthenic Movement
