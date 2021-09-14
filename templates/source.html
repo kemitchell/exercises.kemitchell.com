@@ -10,7 +10,7 @@
     <main role=main>
       <h1><%= title %></h1>
 
-      <p><%= source %></p>
+      <% if (locals.source) { %><p><%= source %></p><% } %>
 
       <a href="<%= url %>"><%= url %></a>
 
