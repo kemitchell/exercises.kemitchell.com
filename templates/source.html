@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang=en-US>
+  <head>
+    <title><%= title %></title>
+    <%- include('meta.html') %>
+  </head>
+  <body>
+    <%- include('nav.html') %>
+
+    <main role=main>
+      <h1><%= title %></h1>
+
+      <p><%= source %></p>
+
+      <a href="<%= url %>"><%= url %></a>
+
+      <% if (locals.exercises) { %>
+      <h2 id=exercises>exercises</h2>
+      <ul>
+        <% for (const exercise of exercises) { %>
+        <li>
+          <a href="/<%= slugify(exercise) %>"><%= exercise %></a>
+        </li>
+        <% } %>
+      </ul>
+      <% } %>
+
+      <% if (locals.notes) { %>
+      <h2 id=notes>notes</h2>
+      <ul>
+        <% for (const note of notes) { %>
+        <li><%= note %></li>
+        <% } %>
+      </ul>
+      <% } %>
+    </main>
+
+    <footer role=contentinfo>
+      <p class=updated>last updated <%= updated.toISOString() %></p>
+    </footer>
+  </body>
+</html>
