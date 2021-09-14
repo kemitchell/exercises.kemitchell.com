@@ -55,13 +55,12 @@
       </ul>
       <% } %>
 
-      <% if (videos.length) { %>
-      <h2 id=videos>videos</h2>
+      <% if (sources.length) { %>
+      <h2 id=sources>sources</h2>
       <ul>
-        <% for (const video of videos) { %>
+        <% for (const source of sources) { %>
         <li>
-          <a href="<%= video.url %>"><%= video.source %></a>
-          <% if (video.url.includes('youtube') || video.url.includes('youtu.be')) { %>(YouTube)<% } %>
+          <a href="/sources/<%= source.slug %>"><%= source.title ? `${source.source}: ` + source.title : source.source %></a>
         </li>
         <% } %>
       </ul>

@@ -6,9 +6,10 @@ const path = require('path')
 const glob = require('glob')
 const yaml = require('js-yaml')
 
+// Process exercises.
 const exerciseFiles = glob.sync('data/exercises/*.yml')
 const exercises = new Set()
-const arrays = ['progressions', 'videos', 'regressions', 'muscles', 'tags', 'references', 'alternatives']
+const arrays = ['progressions', 'sources', 'regressions', 'muscles', 'tags', 'references', 'alternatives']
 let lastUpdated
 for (const file of exerciseFiles) {
   const exercise = yaml.load(fs.readFileSync(file, 'utf8'))
@@ -68,10 +69,32 @@ for (const exercise of exercises.values()) {
   }
 }
 
-const htmlFiles = glob.sync(path.join('site', '*.html'))
+// Process sources.
+const sourceFiles = glob.sync('data/sources/*.yml')
+const sources = new Set()
+for (const file of sourceFiles) {
+  const source = yaml.load(fs.readFileSync(file, 'utf8'))
+  source.updated = fs.statSync(file).mtime
+  source.slug = slugify(source.title.toLowerCase())
+  source.file = file
+  // Add to sources of exercises.
+  for (const exerciseName of source.exercises) {
+    const exercise = Array.from(exercises).find(exercise => exercise.name === exerciseName)
+    if (exercise) exercise.sources.push(source)
+    else {
+      console.error(`Source ${source.title} references unknown exercise ${exerciseName}.`)
+    }
+  }
+  sources.add(source)
+}
+
+const htmlFiles = []
+  .concat(glob.sync(path.join('site', '*.html')))
+  .concat(glob.sync(path.join('site', 'sources', '*.html')))
 for (const htmlFile of htmlFiles) {
   fs.unlinkSync(htmlFile)
 }
+fs.mkdirSync(path.join('site', 'sources'), { recursive: true })
 
 const templateFiles = glob.sync('templates/*.html')
 const templates = {}
@@ -85,6 +108,11 @@ const helpers = { slugify, github: 'https://github.com/kemitchell/exercises.kemi
 for (const exercise of exercises.values()) {
   const pagePath = path.join('site', `${exercise.slug}.html`)
   writeFile(pagePath, ejs.render(templates.exercise, Object.assign({ file: exercise.file }, helpers, exercise), { views }))
+}
+
+for (const source of sources.values()) {
+  const pagePath = path.join('site', 'sources', `${source.slug}.html`)
+  writeFile(pagePath, ejs.render(templates.source, Object.assign({ file: source.file }, helpers, source), { views }))
 }
 
 const indexFile = path.join('site', 'index.html')

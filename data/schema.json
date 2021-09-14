@@ -70,12 +70,6 @@
         }
       ]
     },
-    "references": {
-      "$ref": "#/definitions/urls"
-    },
-    "videos": {
-      "$ref": "#/definitions/urls"
-    },
     "goal": {
       "type": "object",
       "properties": {
@@ -124,38 +118,6 @@
       "items": {
         "type": "string",
         "minLength": 1
-      }
-    }
-  },
-  "definitions": {
-    "urls": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "object",
-        "required": [
-          "url",
-          "source"
-        ],
-        "additionalProperties": false,
-        "properties": {
-          "url": {
-            "type": "string",
-            "format": "url"
-          },
-          "source": {
-            "enum": [
-              "Antranik",
-              "Calisthenic Movement",
-              "CrossFit",
-              "Fitness FAQs",
-              "Michael Eckert",
-              "Tom Merrick",
-              "Tykato Fitness",
-              "Will Levy"
-            ]
-          }
-        }
       }
     }
   }
