@@ -1,7 +1,11 @@
 name: hip flexor stretch
-type: stretch
+type: static
 muscles:
   - hip flexors
+  - psoas
+  - iliacus
+  - rectus femoris
+  - sartorius
 cues:
   - Do not arch the lumbar spine too much.  Contract the glute on the stretched side.
   - Point toes into the ground to aid glute contraction on stretched side.
