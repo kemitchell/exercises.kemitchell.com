@@ -14,10 +14,11 @@
     <%- include('meta.html') %>
   </head>
   <body>
+    <%- include('banner.html') %>
     <%- include('nav.html') %>
 
     <main role=main>
-      <h1><%= name %></h1>
+      <h2><%= name %></h2>
 
       <% if (locals.todo) { %>
       <aside class=todo><p>This exercise <a href="<%= github %>/edit/main/<%= file %>">needs more data</a>.</p></aside>
@@ -28,7 +29,7 @@
       <p class=chain><%= chain %> chain</p>
       <% } %>
 
-      <h2 id=cues>cues</h2>
+      <h3 id=cues>cues</h3>
       <ul>
         <% for (const cue of cues) { %>
         <li><%= cue %></li>
@@ -36,7 +37,7 @@
       </ul>
 
       <% if (muscles.length) { %>
-      <h2 id=muscles>muscles</h2>
+      <h3 id=muscles>muscles</h3>
       <ul>
         <% for (const muscle of muscles) { %>
         <li><a href="/muscles#<%= slugify(muscle) %>"><%= muscle %></a></li>
@@ -45,7 +46,7 @@
       <% } %>
 
       <% if (references.length) { %>
-      <h2 id=references>references</h2>
+      <h3 id=references>references</h3>
       <ul>
         <% for (const reference of references) { %>
         <li>
@@ -56,7 +57,7 @@
       <% } %>
 
       <% if (sources.length) { %>
-      <h2 id=sources>sources</h2>
+      <h3 id=sources>sources</h3>
       <ul>
         <% for (const source of sources) { %>
         <li>
@@ -67,7 +68,7 @@
       <% } %>
 
       <% if (alternatives.length) { %>
-      <h2 id=alternatives>alternatives</h2>
+      <h3 id=alternatives>alternatives</h3>
       <ul>
         <% for (const alternative of alternatives) { %>
         <li>
@@ -78,7 +79,7 @@
       <% } %>
 
       <% if (regressions.length) { %>
-      <h2 id=regressions>regressions</h2>
+      <h3 id=regressions>regressions</h3>
       <ul>
         <% for (const regression of regressions) { %>
         <li>
@@ -89,7 +90,7 @@
       <% } %>
 
       <% if (progressions.length) { %>
-      <h2 id=progressions>progressions</h2>
+      <h3 id=progressions>progressions</h3>
       <ul>
         <% for (const progression of progressions) { %>
         <li>
