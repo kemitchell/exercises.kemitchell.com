@@ -3,3 +3,5 @@ type: dynamic
 tags: [legs, push, pull]
 cues:
   - thigh touches calf at bottom
+muscles:
+  - glutes
