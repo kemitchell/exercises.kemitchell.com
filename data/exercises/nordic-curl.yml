@@ -4,3 +4,5 @@ tags: [legs, pull]
 chain: closed
 cues:
   - keep back straight
+muscles:
+  - hamstrings
