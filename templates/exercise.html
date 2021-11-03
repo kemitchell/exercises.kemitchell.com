@@ -36,6 +36,15 @@
         <% } %>
       </ul>
 
+      <% if (mistakes.length) { %>
+      <h3 id=mistakes>common mistakes</h3>
+      <ul>
+        <% for (const mistake of mistakes) { %>
+        <li><%= mistake %></li>
+        <% } %>
+      </ul>
+      <% } %>
+
       <% if (muscles.length) { %>
       <h3 id=muscles>muscles</h3>
       <ul>
