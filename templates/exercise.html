@@ -108,6 +108,17 @@
         <% } %>
       </ul>
       <% } %>
+      
+      <% if (tags.length) { %>
+      <h3 id=tags>tags</h3>
+      <ul>
+        <% for (const tag of tags) { %>
+        <li>
+          <a href="/tags#<%= slugify(tag) %>"><%= slugify(tag) %></a>
+        </li>
+        <% } %>
+      </ul>
+      <% } %>
     </main>
 
     <footer role=contentinfo>
