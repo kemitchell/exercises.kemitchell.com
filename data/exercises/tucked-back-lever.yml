@@ -1,5 +1,6 @@
 name: tucked back lever
 type: static
+tags: [levers]
 cues:
   - allow back to bend
 goal:

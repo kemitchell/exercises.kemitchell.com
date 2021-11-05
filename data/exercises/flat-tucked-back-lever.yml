@@ -1,5 +1,6 @@
 name: flat tucked back lever
 type: static
+tags: [levers]
 cues:
   - flatten back
 goal:
