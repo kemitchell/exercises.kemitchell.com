@@ -1,6 +1,10 @@
 name: back lever
 type: static
 tags: [levers]
+muscles:
+  - chest
+  - shoulders
+  - core
 cues:
   - retract scapulae (protract and depress)
   - squeeze hands down toward glutes
