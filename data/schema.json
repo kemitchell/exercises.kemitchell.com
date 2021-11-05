@@ -91,6 +91,10 @@
           "type": "integer",
           "minimum": 1
         },
+        "seconds": {
+          "type": "integer",
+          "minimum": 1
+        },
         "note": {
           "type": "string",
           "minLength": 1

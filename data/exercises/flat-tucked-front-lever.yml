@@ -9,5 +9,8 @@ cues:
   - heels to bottom
   - flatten lower back
   - hips level with shoulders from side
+goal:
+  sets: 5
+  seconds: 12
 progressions:
   - frog front lever
