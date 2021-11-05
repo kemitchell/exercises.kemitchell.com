@@ -1,0 +1,9 @@
+name: tucked back lever
+type: static
+cues:
+  - allow back to bend
+goal:
+  sets: 5
+  seconds: 12
+progressions:
+  - flat tucked back lever

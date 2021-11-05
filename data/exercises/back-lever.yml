@@ -1,0 +1,10 @@
+name: back lever
+type: static
+tags: [levers]
+cues:
+  - retract scapulae (protract and depress)
+  - squeeze hands down toward glutes
+  - engage glutes and abdominals
+  - lean forward
+mistakes:
+  - scapular retraction
