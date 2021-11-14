@@ -1,0 +1,5 @@
+source: JTVK
+title: How to do a Perfect Pull-Up
+url: https://www.youtube.com/watch?v=i7kt2SNuX0o
+exercises:
+- Pull-Up
