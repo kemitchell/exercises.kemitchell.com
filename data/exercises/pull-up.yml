@@ -18,6 +18,11 @@ cues:
   - pull evenly with both sides
   - pause at bottom
   - pause at top
+mistakes:
+  - too narrow grip causing wrist pronation, forearm focus
+  - too wide grip limiting range of motion
+  - inactive core
+  - shoulders shrugging at top
 muscles:
   # extension, adduction, and transverse abduction of the shoulder
   - latissimus dorsi
