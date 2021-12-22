@@ -9,7 +9,7 @@ const yaml = require('js-yaml')
 // Process exercises.
 const exerciseFiles = glob.sync('data/exercises/*.yml')
 const exercises = new Set()
-const arrays = ['progressions', 'sources', 'regressions', 'muscles', 'tags', 'references', 'alternatives', 'mistakes']
+const arrays = ['progressions', 'sources', 'regressions', 'muscles', 'tags', 'references', 'alternatives', 'mistakes', 'synonyms']
 let lastUpdated
 for (const file of exerciseFiles) {
   const exercise = yaml.load(fs.readFileSync(file, 'utf8'))

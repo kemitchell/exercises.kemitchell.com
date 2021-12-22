@@ -20,6 +20,14 @@
     <main role=main>
       <h2><%= name %></h2>
 
+      <% if (locals.synonyms) { %>
+      <ul id=synonyms>
+        <% for (const synonym of synonyms) { %>
+        <li><%= synonym %></li>
+        <% } %>
+      </ul>
+      <% } %>
+
       <% if (locals.todo) { %>
       <aside class=todo><p>This exercise <a href="<%= github %>/edit/main/<%= file %>">needs more data</a>.</p></aside>
       <% } %>
