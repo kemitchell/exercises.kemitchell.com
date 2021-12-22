@@ -14,7 +14,7 @@
         <li>
           <a href="<%= slugify(exercise.name) %>"><%= exercise.name %></a>
           <% if (exercise.synonyms.length) { %>
-          (<%= exercise.synonyms.map(slugify).join(', ') %>)
+          (a.k.a. <%= exercise.synonyms.map(slugify).join(', ') %>)
           <% } %>
         </li>
         <% } %>
