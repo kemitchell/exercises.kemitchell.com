@@ -21,12 +21,7 @@
       <h2><%= name %></h2>
 
       <% if (synonyms.length) { %>
-      <h2 id=synonyms>synonyms</h2>
-      <ul>
-        <% for (const synonym of synonyms) { %>
-        <li><%= synonym %></li>
-        <% } %>
-      </ul>
+      (<%= synonyms.join(', ') %>)
       <% } %>
 
       <% if (locals.todo) { %>
