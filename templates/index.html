@@ -13,7 +13,7 @@
         <% for (const exercise of exercises) { %>
         <li>
           <a href="<%= slugify(exercise.name) %>"><%= exercise.name %></a>
-          <% if (exercise.synonyms) { %>
+          <% if (exercise.synonyms.length) { %>
           (<%= exercise.synonyms.map(slugify).join(', ') %>)
           <% } %>
         </li>
