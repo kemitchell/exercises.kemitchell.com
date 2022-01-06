@@ -75,7 +75,7 @@ const sources = new Set()
 for (const file of sourceFiles) {
   const source = yaml.load(fs.readFileSync(file, 'utf8'))
   source.updated = fs.statSync(file).mtime
-  source.slug = slugify(source.title.toLowerCase())
+  source.slug = slugify(source.source + ' ' + source.title.toLowerCase())
   source.file = file
   // Add to sources of exercises.
   for (const exerciseName of source.exercises) {
