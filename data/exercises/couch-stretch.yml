@@ -2,7 +2,7 @@ name: couch stretch
 type: dynamic
 tags: [stretch]
 muscles:
-  - hips flexors
+  - hip flexors
   - quadriceps
 cues:
   - progress knee closer to wall
