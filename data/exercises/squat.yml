@@ -1,6 +1,9 @@
 name: squat
 type: static
 tags: [legs]
+synonyms:
+- Asian squat
+- slavic squat
 joints:
 - ankle
 - hip
