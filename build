@@ -13,7 +13,7 @@ function readYAML (file) {
 // Process exercises.
 const exerciseFiles = glob.sync('data/exercises/*.yml')
 const exercises = new Set()
-const arrays = ['progressions', 'sources', 'regressions', 'muscles', 'tags', 'references', 'alternatives', 'mistakes', 'synonyms']
+const arrays = ['progressions', 'sources', 'regressions', 'muscles', 'joints', 'tags', 'references', 'alternatives', 'mistakes', 'synonyms']
 let lastUpdated
 for (const file of exerciseFiles) {
   const exercise = readYAML(file)
@@ -30,15 +30,19 @@ for (const file of exerciseFiles) {
 
 const tags = new Map()
 const muscles = new Map()
+const joints = new Map()
 for (const exercise of exercises.values()) {
-  // Inherit muscles list from another exercise.
-  if (typeof exercise.muscles === 'string') {
-    const from = Array.from(exercises).find(other => other.name === exercise.muscles)
-    if (!from) {
-      throw new Error(`${exercise.name} inherited muscles from unknown exercise ${exercise.muscles}`)
+  function inherit (key) {
+    if (typeof exercise[key] === 'string') {
+      const from = Array.from(exercises).find(other => other.name === exercise[key])
+      if (!from) {
+        throw new Error(`${exercise.name} inherited ${key} from unknown exercise ${exercise[key]}`)
+      }
+      exercise[key] = from[key]
     }
-    exercise.muscles = from.muscles
   }
+  inherit('muscles')
+  inherit('joints')
 
   // Create regressions links.
   for (const progressionName of exercise.progressions) {
@@ -60,17 +64,15 @@ for (const exercise of exercises.values()) {
     }
   }
 
-  // Index by muscles.
-  for (const muscle of exercise.muscles) {
-    if (!muscles.has(muscle)) muscles.set(muscle, new Set())
-    muscles.get(muscle).add(exercise.name)
+  function indexBy (index, key) {
+    for (const element of exercise[key]) {
+      if (!index.has(element)) index.set(element, new Set())
+      index.get(element).add(exercise.name)
+    }
   }
-
-  // Index by tags.
-  for (const tag of exercise.tags) {
-    if (!tags.has(tag)) tags.set(tag, new Set())
-    tags.get(tag).add(exercise.name)
-  }
+  indexBy(muscles, 'muscles')
+  indexBy(joints, 'joints')
+  indexBy(tags, 'tags')
 }
 
 // Process sources.
@@ -124,6 +126,9 @@ writeFile(indexFile, ejs.render(templates.index, Object.assign({}, helpers, { ex
 
 const musclesFile = path.join('site', 'muscles.html')
 writeFile(musclesFile, ejs.render(templates.muscles, Object.assign({}, helpers, { updated: lastUpdated, muscles }), { views }))
+
+const jointsFile = path.join('site', 'joints.html')
+writeFile(jointsFile, ejs.render(templates.joints, Object.assign({}, helpers, { updated: lastUpdated, joints }), { views }))
 
 const tagsFile = path.join('site', 'tags.html')
 writeFile(tagsFile, ejs.render(templates.tags, Object.assign({}, helpers, { updated: lastUpdated, tags }), { views }))

@@ -33,6 +33,24 @@
         "closed"
       ]
     },
+    joints: {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "ankle",
+              "knee",
+              "hip"
+            ]
+          }
+        }
+      ]
+    },
     "muscles": {
       "oneOf": [
         {

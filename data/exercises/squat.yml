@@ -1,6 +1,10 @@
 name: squat
 type: static
 tags: [legs]
+joints:
+- ankle
+- hip
+- knee
 cues:
 - heels flat on ground
 - back straight

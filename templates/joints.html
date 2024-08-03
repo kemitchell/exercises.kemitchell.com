@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang=en-US>
+  <head>
+    <title>joints</title>
+    <%- include('meta.html') %>
+  </head>
+  <body>
+    <%- include('banner.html') %>
+    <%- include('nav.html') %>
+
+    <main role=main>
+      <h2>joints</h2>
+
+      <ul>
+        <% for (const joint of Array.from(joints.keys()).sort()) { %>
+        <% const exercises = joints.get(joint) %>
+        <li id="<%= slugify(joint) %>">
+          <%= joint %>
+          <ul>
+            <% for (const exerciseName of exercises.values()) { %>
+            <li>
+              <a href="<%= slugify(exerciseName) %>"><%= exerciseName %></a>
+            </li>
+            <% } %>
+          </ul>
+        </li>
+        <% } %>
+      </ul>
+    </main>
+
+    <footer role=contentinfo>
+      <p class=updated>last updated <%= updated.toISOString() %></p>
+    </footer>
+  </body>
+</html>
