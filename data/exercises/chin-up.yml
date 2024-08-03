@@ -3,6 +3,6 @@ type: dynamic
 chain: closed
 tags: [military, arms, chest, core, pull]
 cues:
-  - hands supinated
+- hands supinated
 alternatives:
-  - pull-up
+- pull-up

@@ -2,9 +2,9 @@ name: tucked back lever
 type: static
 tags: [levers]
 cues:
-  - allow back to bend
+- allow back to bend
 goal:
   sets: 5
   seconds: 12
 progressions:
-  - flat tucked back lever
+- flat tucked back lever

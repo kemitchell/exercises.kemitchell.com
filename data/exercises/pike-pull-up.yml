@@ -1,14 +1,14 @@
 name: pike pull-up
 synonyms:
-  - l-sit pull-up
+- l-sit pull-up
 type: dynamic
 chain: closed
 tags: [back, arms, pull]
 cues:
-  - legs parallel to floor
-  - toes pointed (plantar flexion)
-  - thighs flexed
-  - calves flexed
+- legs parallel to floor
+- toes pointed (plantar flexion)
+- thighs flexed
+- calves flexed
 alternatives:
-  - pull-up
-  - chin-up
+- pull-up
+- chin-up

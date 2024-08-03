@@ -2,15 +2,15 @@ name: flat tucked front lever
 type: static
 tags: [lever]
 cues:
-  - shoulders retracted
-  - shoulders depressed
-  - arms straight
-  - knees to chest
-  - heels to bottom
-  - flatten lower back
-  - hips level with shoulders from side
+- shoulders retracted
+- shoulders depressed
+- arms straight
+- knees to chest
+- heels to bottom
+- flatten lower back
+- hips level with shoulders from side
 goal:
   sets: 5
   seconds: 12
 progressions:
-  - frog front lever
+- frog front lever

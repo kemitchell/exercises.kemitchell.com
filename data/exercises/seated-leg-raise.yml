@@ -2,9 +2,9 @@ name: seated leg raise
 type: dynamic
 tags: [legs]
 cues:
-  - back up straight at 90 degrees or bent forward
-  - hug resting leg to chest
-  - leg straight
-  - toe pointed
+- back up straight at 90 degrees or bent forward
+- hug resting leg to chest
+- leg straight
+- toe pointed
 muscles:
-  - hip flexors
+- hip flexors

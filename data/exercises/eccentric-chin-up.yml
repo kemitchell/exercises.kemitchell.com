@@ -3,9 +3,9 @@ type: dynamic
 chain: closed
 tags: [back, pull]
 cues:
-  - hands supinated
+- hands supinated
 muscles: chin-up
 progressions:
-  - chin-up
+- chin-up
 alternatives:
-  - eccentric pull-up
+- eccentric pull-up

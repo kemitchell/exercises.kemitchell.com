@@ -2,10 +2,10 @@ name: hanging knee raise
 type: dynamic
 tags: [lever]
 cues:
-  - shoulders retracted
-  - shoulders depressed
-  - arms straight
-  - pause at top
-  - keep legs in front to minimize swinging
+- shoulders retracted
+- shoulders depressed
+- arms straight
+- pause at top
+- keep legs in front to minimize swinging
 progressions:
-  - tucked front lever
+- tucked front lever

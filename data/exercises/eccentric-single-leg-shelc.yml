@@ -2,12 +2,12 @@ name: two-leg-concentric, one-leg-eccentric leg extension with leg curl
 type: dynamic
 tags: [legs, pull]
 cues:
-  - raise with both legs
-  - do eccentric with just one working leg
-  - bend the non-working leg during the eccentric movement
+- raise with both legs
+- do eccentric with just one working leg
+- bend the non-working leg during the eccentric movement
 muscles: eccentric nordic curl
 goal:
   repetitions: 10
   note: per side
 progressions:
-  - single-leg leg extension with leg curl
+- single-leg leg extension with leg curl

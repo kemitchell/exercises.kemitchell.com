@@ -2,15 +2,15 @@ name: natural leg extension
 type: dynamic
 tags: [legs]
 cues:
-  - knees shoulder width or wider
-  - tense glutes
-  - tight core
-  - tuck chin
+- knees shoulder width or wider
+- tense glutes
+- tight core
+- tuck chin
 mistakes:
-  - arching back
-  - knees too narrow
-  - using momentum
-  - using stretch reflex
-  - returning vertical each rep, offloading tension
+- arching back
+- knees too narrow
+- using momentum
+- using stretch reflex
+- returning vertical each rep, offloading tension
 muscles:
-  - quadriceps
+- quadriceps

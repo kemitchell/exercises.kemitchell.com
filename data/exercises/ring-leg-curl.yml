@@ -2,11 +2,11 @@ name: ring leg curl
 type: dynamic
 tags: [legs, pull]
 cues:
-  - heels over top of stability ball
-  - keep hips up, back completely straight
-  - bend knees, bringing ball toward buttocks
+- heels over top of stability ball
+- keep hips up, back completely straight
+- bend knees, bringing ball toward buttocks
 muscles:
-  - hamstrings
-  - glutes
+- hamstrings
+- glutes
 progressions:
-  - eccentric nordic curl
+- eccentric nordic curl

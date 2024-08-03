@@ -3,11 +3,11 @@ type: dynamic
 chain: closed
 tags: [legs, pull]
 cues:
-  - keep back straight
+- keep back straight
 muscles:
-  - hamstrings
-  - semimembranosus
-  - semitendinosus
-  - biceps femoris
+- hamstrings
+- semimembranosus
+- semitendinosus
+- biceps femoris
 progressions:
-  - nordic curl
+- nordic curl

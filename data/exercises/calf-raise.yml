@@ -2,6 +2,6 @@ name: standing calf raise
 type: dynamic
 tags: [legs]
 cues:
-  - pause at bottom
+- pause at bottom
 muscles:
-  - calves
+- calves

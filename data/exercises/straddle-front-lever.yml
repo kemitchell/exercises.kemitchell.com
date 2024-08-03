@@ -2,7 +2,7 @@ name: straddle front lever
 type: static
 tags: [lever]
 cues:
-  - legs straight
-  - extend hips
+- legs straight
+- extend hips
 progressions:
-  - front lever
+- front lever

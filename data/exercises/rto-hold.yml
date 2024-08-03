@@ -2,8 +2,8 @@ name: rings-turned-out support hold
 type: static
 tags: [arms, chest]
 cues:
-  - lock out elbows
-  - tight core
-  - legs straight
+- lock out elbows
+- tight core
+- legs straight
 progressions:
-  - feet-assisted ring dip
+- feet-assisted ring dip

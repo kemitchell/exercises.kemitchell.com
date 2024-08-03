@@ -2,8 +2,8 @@ name: band-assisted ring dip
 type: dynamic
 tags: [arms, chest, push]
 cues:
-  - double up band
-  - hold band against ring under each hand
-  - both knees in band
+- double up band
+- hold band against ring under each hand
+- both knees in band
 progressions:
-  - ring dip
+- ring dip

@@ -3,11 +3,11 @@ type: dynamic
 tags: [legs, pull]
 chain: closed
 cues:
-  - keep back straight
-  - pull heels toward butt
-  - clench fists to encourage body tension
-  - reset hip position at top
-  - ankles naturally plantarflex at peak tension
-  - hand behind head to make harder
+- keep back straight
+- pull heels toward butt
+- clench fists to encourage body tension
+- reset hip position at top
+- ankles naturally plantarflex at peak tension
+- hand behind head to make harder
 muscles:
-  - hamstrings
+- hamstrings

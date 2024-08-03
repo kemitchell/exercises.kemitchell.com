@@ -2,12 +2,12 @@ name: supine leg extension with leg curl
 type: dynamic
 tags: [legs, pull]
 cues:
-  - heels over top of stability ball
-  - keep hips up, back completely straight
-  - bend knees, bringing ball toward buttocks
+- heels over top of stability ball
+- keep hips up, back completely straight
+- bend knees, bringing ball toward buttocks
 muscles: eccentric nordic curl
 goal:
   sets: 4
   repetitions: 15
 progressions:
-  - two-leg-concentric, one-leg-eccentric leg extension with leg curl
+- two-leg-concentric, one-leg-eccentric leg extension with leg curl

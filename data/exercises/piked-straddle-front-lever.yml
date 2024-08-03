@@ -2,6 +2,6 @@ name: piked straddle front lever
 type: static
 tags: [lever]
 cues:
-  - flex hips
+- flex hips
 progressions:
-  - straddle front lever
+- straddle front lever

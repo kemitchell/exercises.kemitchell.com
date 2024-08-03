@@ -2,9 +2,9 @@ name: flat tucked back lever
 type: static
 tags: [levers]
 cues:
-  - flatten back
+- flatten back
 goal:
   sets: 5
   seconds: 12
 progressions:
-  - open legs tucked back lever
+- open legs tucked back lever

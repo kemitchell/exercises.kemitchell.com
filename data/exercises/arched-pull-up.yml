@@ -3,8 +3,8 @@ type: dynamic
 chain: closed
 tags: [military, back, arms, pull]
 cues:
-  - arch back
+- arch back
 muscles: pull-up
 alternatives:
-  - pull-up
-  - chin-up
+- pull-up
+- chin-up

@@ -2,10 +2,10 @@ name: straddle back lever
 type: static
 tags: [levers]
 cues:
-  - legs straight
-  - spread legs apart
+- legs straight
+- spread legs apart
 goal:
   sets: 5
   seconds: 12
 progressions:
-  - toes up back lever
+- toes up back lever

@@ -2,8 +2,8 @@ name: shrimp squat
 type: dynamic
 tags: [legs, push, pull]
 cues:
-  - one leg bent back
-  - arms out front or holding loose leg
-  - touch knee to ground at bottom
+- one leg bent back
+- arms out front or holding loose leg
+- touch knee to ground at bottom
 progressions:
-  - pistol squat
+- pistol squat
