@@ -1,6 +1,7 @@
-name: sit-up
+name: situp
 type: dynamic
-tags: [military, rpft, core]
+tags: [apft, military, rpft, core]
 cues:
+- full range of motion
 - all the way up
 - all the way down
