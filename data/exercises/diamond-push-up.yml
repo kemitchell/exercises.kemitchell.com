@@ -1,6 +1,10 @@
 name: diamond push-up
 type: dynamic
-tags: [arms, chest, core, push]
+tags:
+- arms
+- chest
+- core
+- push
 cues:
 - brace core
 - baseball cap backwards

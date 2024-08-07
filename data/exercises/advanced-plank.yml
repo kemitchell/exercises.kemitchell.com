@@ -1,6 +1,7 @@
 name: advanced plank
 type: static
-tags: [core]
+tags:
+- core
 cues:
 - bring elbows closer
 - pull elbows and toes together

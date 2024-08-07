@@ -1,6 +1,9 @@
 name: step-up
 type: dynamic
-tags: [legs, push, pull]
+tags:
+- legs
+- pull
+- push
 cues:
 - thigh touches calf at bottom
 muscles:

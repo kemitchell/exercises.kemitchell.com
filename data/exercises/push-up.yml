@@ -1,6 +1,13 @@
 name: push-up
 type: dynamic
-tags: [apft, military, arms, chest, core, push, rpft]
+tags:
+- apft
+- arms
+- chest
+- core
+- military
+- push
+- rpft
 cues:
 - keep back straight
 - touch chest to floor at bottom

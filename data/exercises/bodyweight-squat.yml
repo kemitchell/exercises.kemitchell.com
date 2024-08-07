@@ -1,7 +1,10 @@
 name: bodyweight squat
 todo: true
 type: dynamic
-tags: [legs, push, pull]
+tags:
+- legs
+- pull
+- push
 cues:
 - calves touch thighs at bottom
 progressions:

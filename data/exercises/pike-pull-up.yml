@@ -3,7 +3,10 @@ synonyms:
 - l-sit pull-up
 type: dynamic
 chain: closed
-tags: [back, arms, pull]
+tags:
+- arms
+- back
+- pull
 cues:
 - legs parallel to floor
 - toes pointed (plantar flexion)

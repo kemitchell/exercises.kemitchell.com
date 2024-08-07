@@ -1,6 +1,7 @@
 name: bench press
 type: dynamic
-tags: [barbell]
+tags:
+- barbell
 cues:
 - feet flat on floor
 - lower back slightly arched

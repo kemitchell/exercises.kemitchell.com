@@ -1,6 +1,8 @@
 name: two-leg-concentric, one-leg-eccentric leg extension with leg curl
 type: dynamic
-tags: [legs, pull]
+tags:
+- legs
+- pull
 cues:
 - raise with both legs
 - do eccentric with just one working leg

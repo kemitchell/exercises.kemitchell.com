@@ -1,6 +1,7 @@
 name: frog front lever
 type: static
-tags: [lever]
+tags:
+- lever
 cues:
 - hips spread out
 progressions:

@@ -1,7 +1,11 @@
 name: arched pull-up
 type: dynamic
 chain: closed
-tags: [military, back, arms, pull]
+tags:
+- arms
+- back
+- military
+- pull
 cues:
 - arch back
 muscles: pull-up

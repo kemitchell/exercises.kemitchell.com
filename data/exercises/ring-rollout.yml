@@ -1,6 +1,7 @@
 name: ring rollout
 type: dynamic
-tags: [core]
+tags:
+- core
 cues:
 - palms supine
 - posterior pelvic tilt

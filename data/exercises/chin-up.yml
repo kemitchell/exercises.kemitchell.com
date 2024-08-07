@@ -1,7 +1,13 @@
 name: chin-up
 type: dynamic
 chain: closed
-tags: [military, arms, chest, core, pull, rpft]
+tags:
+- arms
+- chest
+- core
+- military
+- pull
+- rpft
 cues:
 - hands supinated
 alternatives:

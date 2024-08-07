@@ -1,6 +1,7 @@
 name: toes up back lever
 type: static
-tags: [levers]
+tags:
+- levers
 cues:
 - bend knees
 - plantarflex ankles

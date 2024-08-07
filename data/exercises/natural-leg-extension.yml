@@ -1,6 +1,7 @@
 name: natural leg extension
 type: dynamic
-tags: [legs]
+tags:
+- legs
 cues:
 - knees shoulder width or wider
 - tense glutes

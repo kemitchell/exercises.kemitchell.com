@@ -1,6 +1,9 @@
 name: reverse hyperextension
 type: dynamic
-tags: [core, legs, pull]
+tags:
+- core
+- legs
+- pull
 cues:
 - do not arch back
 - legs straight

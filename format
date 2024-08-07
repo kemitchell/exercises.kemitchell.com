@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'yaml'
+
+Dir.glob('data/exercises/*.yml').each do |file|
+  puts file
+  data = YAML.load_file(file)
+  data['tags'].sort! unless data['tags'].nil?
+  File.write(file, YAML.dump(data).sub(/^---\n/, ''))
+end

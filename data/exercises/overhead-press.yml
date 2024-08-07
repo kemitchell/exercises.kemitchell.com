@@ -1,4 +1,6 @@
 name: overhead press
 type: dynamic
-synonyms: [military press]
-tags: [barbell]
+synonyms:
+- military press
+tags:
+- barbell

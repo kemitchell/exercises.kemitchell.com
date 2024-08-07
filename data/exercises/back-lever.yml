@@ -1,6 +1,7 @@
 name: back lever
 type: static
-tags: [levers]
+tags:
+- levers
 muscles:
 - chest
 - shoulders

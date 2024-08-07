@@ -1,6 +1,8 @@
 name: ring leg curl
 type: dynamic
-tags: [legs, pull]
+tags:
+- legs
+- pull
 cues:
 - heels over top of stability ball
 - keep hips up, back completely straight

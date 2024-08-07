@@ -1,7 +1,10 @@
 name: one-arm pull-up
 todo: true
 type: dynamic
-tags: [back, arms, pull]
+tags:
+- arms
+- back
+- pull
 chain: closed
 cues:
 - one arm down by side

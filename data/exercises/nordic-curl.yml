@@ -1,6 +1,8 @@
 name: nordic curl
 type: dynamic
-tags: [legs, pull]
+tags:
+- legs
+- pull
 chain: closed
 cues:
 - keep back straight

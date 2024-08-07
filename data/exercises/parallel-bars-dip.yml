@@ -1,7 +1,10 @@
 name: parallel bars dip
 type: dynamic
 chain: closed
-tags: [arms, shoulders, push]
+tags:
+- arms
+- push
+- shoulders
 cues:
 - descent to 90 degrees
 - shoulders protracted at top

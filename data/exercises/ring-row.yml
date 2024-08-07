@@ -1,6 +1,9 @@
 name: ring row
 type: dynamic
-tags: [arms, back, pull]
+tags:
+- arms
+- back
+- pull
 muscles:
 - latissimus dorsi
 - rhomboids

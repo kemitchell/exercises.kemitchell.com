@@ -3,7 +3,10 @@ synonyms:
 - band-assisted l-sit pull-up
 type: dynamic
 chain: closed
-tags: [back, arms, pull]
+tags:
+- arms
+- back
+- pull
 cues:
 - lower slowly
 progressions:

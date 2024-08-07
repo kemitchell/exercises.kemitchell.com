@@ -1,6 +1,7 @@
 name: open legs tucked back lever
 type: static
-tags: [levers]
+tags:
+- levers
 cues:
 - spread knees apart
 goal:

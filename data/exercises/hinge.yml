@@ -1,5 +1,6 @@
 name: hinge
 type: dynamic
-tags: [legs]
+tags:
+- legs
 progressions:
 - deadlift

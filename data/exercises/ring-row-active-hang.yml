@@ -1,6 +1,8 @@
 name: ring row active hang
 type: static
-tags: [arms, back]
+tags:
+- arms
+- back
 muscles: ring row
 cues:
 - focus on scapular retraction

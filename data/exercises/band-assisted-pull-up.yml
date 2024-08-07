@@ -1,6 +1,8 @@
 name: band-assisted pull-up
 type: dynamic
-tags: [back, pull]
+tags:
+- back
+- pull
 cues:
 - same as for pull-up
 - band on foot

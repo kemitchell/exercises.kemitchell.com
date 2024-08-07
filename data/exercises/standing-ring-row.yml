@@ -1,6 +1,9 @@
 name: standing ring row
 type: dynamic
-tags: [arms, back, pull]
+tags:
+- arms
+- back
+- pull
 muscles: ring row
 cues:
 - focus on scapular retraction

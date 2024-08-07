@@ -1,3 +1,4 @@
 name: deadlift
 type: dynamic
-tags: [barbell]
+tags:
+- barbell

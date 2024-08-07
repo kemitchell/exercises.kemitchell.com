@@ -1,6 +1,7 @@
 name: couch stretch
 type: dynamic
-tags: [stretch]
+tags:
+- stretch
 muscles:
 - hip flexors
 - quadriceps

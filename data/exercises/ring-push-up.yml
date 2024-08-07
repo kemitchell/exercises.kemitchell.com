@@ -1,6 +1,10 @@
 name: ring push-up
 type: dynamic
-tags: [arms, chest, core, push]
+tags:
+- arms
+- chest
+- core
+- push
 cues:
 - back straight
 - posterior pelvic tilt

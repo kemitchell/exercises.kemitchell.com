@@ -1,3 +1,5 @@
 name: clean and jerk
 type: dynamic
-tags: [barbell, olympic]
+tags:
+- barbell
+- olympic

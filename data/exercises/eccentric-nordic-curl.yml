@@ -1,7 +1,9 @@
 name: eccentric nordic curl
 type: dynamic
 chain: closed
-tags: [legs, pull]
+tags:
+- legs
+- pull
 cues:
 - keep back straight
 muscles:

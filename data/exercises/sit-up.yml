@@ -1,6 +1,10 @@
 name: situp
 type: dynamic
-tags: [apft, military, rpft, core]
+tags:
+- apft
+- core
+- military
+- rpft
 cues:
 - full range of motion
 - all the way up

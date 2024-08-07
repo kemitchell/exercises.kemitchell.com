@@ -1,6 +1,8 @@
 name: plank
 type: static
-tags: [core, hold]
+tags:
+- core
+- hold
 cues:
 - upper arm 90 degrees
 - elbows beneath shoulders

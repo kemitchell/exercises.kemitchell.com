@@ -1,6 +1,7 @@
 name: squat
 type: static
-tags: [legs]
+tags:
+- legs
 synonyms:
 - Asian squat
 - slavic squat

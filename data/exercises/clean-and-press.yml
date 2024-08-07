@@ -1,3 +1,5 @@
 name: clean and press
 type: dynamic
-tags: [barbell, former-olympic]
+tags:
+- barbell
+- former-olympic

@@ -1,6 +1,9 @@
 name: feet-assisted ring dip
 type: dynamic
-tags: [arms, chest, push]
+tags:
+- arms
+- chest
+- push
 cues:
 - double up band
 - hold band against ring under each hand

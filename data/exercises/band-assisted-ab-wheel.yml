@@ -1,6 +1,7 @@
 name: band-assisted ab wheel
 type: dynamic
-tags: [core]
+tags:
+- core
 cues:
 - keep hips extended during working portion
 - band around waist

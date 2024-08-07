@@ -1,6 +1,8 @@
 name: pallof press
 type: dynamic
-tags: [core, pull]
+tags:
+- core
+- pull
 cues:
 - brace core before motion
 - keep arms level with ground throughout motion
