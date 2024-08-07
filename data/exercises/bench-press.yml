@@ -1,3 +1,12 @@
 name: bench press
 type: dynamic
 tags: [barbell]
+cues:
+- feet flat on floor
+- lower back slightly arched
+- racked back over the forehead
+- bar traves a curved path down to the solar plexus
+- hold breath and brace core before lowering
+- exhale when pushing
+muscles:
+- pectoralis major
