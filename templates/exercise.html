@@ -34,12 +34,14 @@
       <p class=chain><%= chain %> chain</p>
       <% } %>
 
+      <% if (locals.cues) { %>
       <h3 id=cues>cues</h3>
       <ul>
         <% for (const cue of cues) { %>
         <li><%= cue %></li>
         <% } %>
       </ul>
+      <% } %>
 
       <% if (mistakes.length) { %>
       <h3 id=mistakes>common mistakes</h3>
