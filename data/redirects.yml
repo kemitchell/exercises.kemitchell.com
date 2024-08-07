@@ -6,3 +6,5 @@
   to: ring row
 - from: rings push-up
   to: ring push-up
+- from: military press
+  to: overhead press
