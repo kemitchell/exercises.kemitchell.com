@@ -1,7 +1,7 @@
 name: pull-up
 type: dynamic
 chain: closed
-tags: [military, back, arms, pull]
+tags: [military, back, arms, pull, big5]
 cues:
 - pronate arms
 - fingers over bar without pinching top of palm
