@@ -2,6 +2,7 @@ name: bench press
 type: dynamic
 tags:
 - barbell
+- powerlifting
 cues:
 - feet flat on floor
 - lower back slightly arched
