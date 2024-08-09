@@ -33,7 +33,7 @@
         "closed"
       ]
     },
-    joints: {
+    "joints": {
       "oneOf": [
         {
           "type": "string"
