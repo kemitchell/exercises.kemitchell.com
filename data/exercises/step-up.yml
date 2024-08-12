@@ -1,10 +1,16 @@
 name: step-up
 type: dynamic
+sides: separate
 tags:
 - legs
 - pull
 - push
 cues:
+- start with heel on the floor, toes off the floor
+- don't bounce from the bottom
 - thigh touches calf at bottom
+- descend slowly under control
 muscles:
 - glutes
+progressions:
+- pistol squat

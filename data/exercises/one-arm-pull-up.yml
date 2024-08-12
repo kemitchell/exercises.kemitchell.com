@@ -1,5 +1,6 @@
 name: one-arm pull-up
 todo: true
+sides: separate
 type: dynamic
 tags:
 - arms

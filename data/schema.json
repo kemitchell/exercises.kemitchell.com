@@ -13,6 +13,12 @@
       "type": "string",
       "minLength": 1
     },
+    "sides": {
+      "enum": [
+        "combined",
+        "separate"
+      ]
+    },
     "synonyms": {
       "type": "array",
       "items": {
