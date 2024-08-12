@@ -3,13 +3,8 @@
 
 require 'yaml'
 
-Dir.glob('data/exercises/*.yml').each do |file|
+Dir.glob('data/**/*.yml').each do |file|
   data = YAML.load_file(file)
-  data['tags']&.sort!
-  File.write(file, YAML.dump(data).sub(/^---\n/, ''))
-end
-
-Dir.glob('data/sources/*.yml').each do |file|
-  data = YAML.load_file(file)
+  data['tags']&.sort! if data.is_a?(Hash)
   File.write(file, YAML.dump(data).sub(/^---\n/, ''))
 end
