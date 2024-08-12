@@ -8,3 +8,8 @@ Dir.glob('data/exercises/*.yml').each do |file|
   data['tags']&.sort!
   File.write(file, YAML.dump(data).sub(/^---\n/, ''))
 end
+
+Dir.glob('data/sources/*.yml').each do |file|
+  data = YAML.load_file(file)
+  File.write(file, YAML.dump(data).sub(/^---\n/, ''))
+end
