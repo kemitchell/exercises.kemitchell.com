@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "required": [
+    "title",
+    "source"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "format": "url"
+    },
+    "exercises": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

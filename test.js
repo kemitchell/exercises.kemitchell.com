@@ -5,10 +5,11 @@ const glob = require('glob')
 const tape = require('tape')
 const yaml = require('js-yaml')
 
-const schema = require('./data/schema')
 const ajv = new AJV()
 addFormats(ajv)
-const validate = ajv.compile(schema)
+
+const exerciseSchema = require('./data/schemas/exercise')
+const validateExercise = ajv.compile(exerciseSchema)
 
 const recordFiles = glob.sync('data/exercises/*.yml')
 const exercises = new Map()
@@ -19,8 +20,8 @@ for (const recordFile of recordFiles) {
       parsed = yaml.load(fs.readFileSync(recordFile, 'utf8'))
     }, 'valid YAML')
     exercises.set(parsed.name, parsed)
-    validate(parsed)
-    test.deepEqual(validate.errors, null, 'conforms to schema')
+    validateExercise(parsed)
+    test.deepEqual(validateExercise.errors, null, 'conforms to schema')
     test.end()
   })
 }
@@ -37,3 +38,17 @@ tape('progressions', suite => {
   }
   suite.end()
 })
+
+const sourceSchema = require('./data/schemas/source')
+const validateSource = ajv.compile(sourceSchema)
+
+const sourceFiles = glob.sync('data/sources/*.yml')
+for (const sourceFile of sourceFiles) {
+  let parsed
+  tape(sourceFile, test => {
+    parsed = yaml.load(fs.readFileSync(sourceFile, 'utf8'))
+    validateSource(parsed)
+    test.deepEqual(validateSource.errors, null, 'conforms to schema')
+    test.end()
+  })
+}
