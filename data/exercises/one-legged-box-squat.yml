@@ -2,9 +2,9 @@ name: one-legged box squat
 type: dynamic
 sides: separate
 tags:
-  - legs
-  - push
+- legs
+- push
 progressions:
-  - pistol squat
+- pistol squat
 alternatives:
-  - band-assisted pistol squat
+- band-assisted pistol squat
