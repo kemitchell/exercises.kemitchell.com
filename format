@@ -1,10 +1,18 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
+#!/usr/bin/env node
+import { load, dump } from 'js-yaml'
+import { readFileSync, writeFileSync } from 'fs'
+import { globSync } from 'glob'
 
-require 'yaml'
-
-Dir.glob('data/**/*.yml').each do |file|
-  data = YAML.load_file(file)
-  data['tags']&.sort! if data.is_a?(Hash)
-  File.write(file, YAML.dump(data).sub(/^---\n/, ''))
-end
+for (const file of globSync('data/**/*.yml')) {
+  const data = load(readFileSync(file, 'utf8'))
+  writeFileSync(
+    file,
+    dump(data, {
+      indent: 2,
+      noArrayIndent: true,
+      lineWidth: -1, // unlimited
+      quotingType: "'",
+      forceQuotes: false
+    })
+  )
+}

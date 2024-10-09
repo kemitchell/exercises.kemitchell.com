@@ -119,7 +119,7 @@ properties:
     type: array
   tags:
     items:
-      pattern: "^[a-z-]+$"
+      pattern: ^[a-z-]+$
       type: string
     minItems: 1
     type: array
