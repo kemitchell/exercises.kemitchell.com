@@ -1,0 +1,20 @@
+properties:
+  exercises:
+    items:
+      type: string
+    type: array
+  notes:
+    items:
+      type: string
+    type: array
+  source:
+    type: string
+  title:
+    type: string
+  url:
+    format: url
+    type: string
+required:
+- title
+- source
+type: object

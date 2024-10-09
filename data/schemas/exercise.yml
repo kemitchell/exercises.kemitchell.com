@@ -1,0 +1,135 @@
+additionalProperties: false
+properties:
+  alternatives:
+    items:
+      minLength: 1
+      type: string
+    minItems: 1
+    type: array
+  chain:
+    enum:
+    - open
+    - closed
+  cues:
+    items:
+      minLength: 1
+      type: string
+    minItems: 1
+    type: array
+  goal:
+    additionalProperties: false
+    properties:
+      note:
+        minLength: 1
+        type: string
+      repetitions:
+        minimum: 1
+        type: integer
+      seconds:
+        minimum: 1
+        type: integer
+      sets:
+        minimum: 1
+        type: integer
+    type: object
+  joints:
+    oneOf:
+    - type: string
+    - items:
+        enum:
+        - ankle
+        - knee
+        - hip
+      minItems: 1
+      type: array
+  mistakes:
+    items:
+      minLength: 1
+      type: string
+    minItems: 1
+    type: array
+  muscles:
+    oneOf:
+    - type: string
+    - items:
+        enum:
+        - biceps brachii
+        - biceps femoris
+        - brachialis
+        - brachioradialis
+        - calves
+        - chest
+        - soleus
+        - adductor magnus
+        - coracobrachialis
+        - core
+        - deltoid
+        - external oblique
+        - flexor digiti minimi brevis
+        - flexor digitorum profundus
+        - flexor digitorum superficialis
+        - flexor pollicis brevis
+        - flexor pollicis longus
+        - glutes
+        - gluteus maximus
+        - gluteus medius
+        - gluteus minimus
+        - hamstrings
+        - hip flexors
+        - infraspinatus
+        - internal oblique
+        - iliacus
+        - latissimus dorsi
+        - levator scapulae
+        - pectoralis major
+        - pectoralis minor
+        - psoas
+        - quadriceps femoris
+        - rectus abdominis
+        - rectus femoris
+        - rhomboids
+        - sartorius
+        - semimembranosus
+        - semitendinosus
+        - shoulders
+        - teres major
+        - teres minor
+        - transverse abdominis
+        - trapezius
+        - triceps brachii
+      minItems: 1
+      type: array
+  name:
+    minLength: 1
+    type: string
+  progressions:
+    items:
+      minLength: 1
+      type: string
+    minItems: 1
+    type: array
+  sides:
+    enum:
+    - combined
+    - separate
+  synonyms:
+    items:
+      minLength: 1
+      type: string
+    type: array
+  tags:
+    items:
+      pattern: ^[a-z-]+$
+      type: string
+    minItems: 1
+    type: array
+  todo:
+    type: boolean
+  type:
+    enum:
+    - static
+    - dynamic
+required:
+- name
+- type
+type: object

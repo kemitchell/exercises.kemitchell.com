@@ -8,7 +8,7 @@ const yaml = require('js-yaml')
 const ajv = new AJV()
 addFormats(ajv)
 
-const exerciseSchema = require('./data/schemas/exercise')
+const exerciseSchema = yaml.load(fs.readFileSync('./data/schemas/exercise.yml', 'utf8'))
 const validateExercise = ajv.compile(exerciseSchema)
 
 const recordFiles = glob.sync('data/exercises/*.yml')
@@ -39,7 +39,7 @@ tape('progressions', suite => {
   suite.end()
 })
 
-const sourceSchema = require('./data/schemas/source')
+const sourceSchema = yaml.load(fs.readFileSync('./data/schemas/source.yml', 'utf8'))
 const validateSource = ajv.compile(sourceSchema)
 
 const sourceFiles = glob.sync('data/sources/*.yml')
