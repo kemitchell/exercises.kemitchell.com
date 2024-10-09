@@ -1,23 +1,23 @@
-const AJV = require('ajv')
-const addFormats = require('ajv-formats')
-const fs = require('fs')
-const glob = require('glob')
-const tape = require('tape')
-const yaml = require('js-yaml')
+import AJV from 'ajv'
+import addFormats from 'ajv-formats'
+import { readFileSync } from 'fs'
+import { globSync } from 'glob'
+import tape from 'tape'
+import yaml from 'js-yaml'
 
 const ajv = new AJV()
 addFormats(ajv)
 
-const exerciseSchema = yaml.load(fs.readFileSync('./data/schemas/exercise.yml', 'utf8'))
+const exerciseSchema = yaml.load(readFileSync('./data/schemas/exercise.yml', 'utf8'))
 const validateExercise = ajv.compile(exerciseSchema)
 
-const recordFiles = glob.sync('data/exercises/*.yml')
+const recordFiles = globSync('data/exercises/*.yml')
 const exercises = new Map()
 for (const recordFile of recordFiles) {
   tape(recordFile, test => {
     let parsed
     test.doesNotThrow(() => {
-      parsed = yaml.load(fs.readFileSync(recordFile, 'utf8'))
+      parsed = yaml.load(readFileSync(recordFile, 'utf8'))
     }, 'valid YAML')
     exercises.set(parsed.name, parsed)
     validateExercise(parsed)
@@ -39,14 +39,14 @@ tape('progressions', suite => {
   suite.end()
 })
 
-const sourceSchema = yaml.load(fs.readFileSync('./data/schemas/source.yml', 'utf8'))
+const sourceSchema = yaml.load(readFileSync('./data/schemas/source.yml', 'utf8'))
 const validateSource = ajv.compile(sourceSchema)
 
-const sourceFiles = glob.sync('data/sources/*.yml')
+const sourceFiles = globSync('data/sources/*.yml')
 for (const sourceFile of sourceFiles) {
   let parsed
   tape(sourceFile, test => {
-    parsed = yaml.load(fs.readFileSync(sourceFile, 'utf8'))
+    parsed = yaml.load(readFileSync(sourceFile, 'utf8'))
     validateSource(parsed)
     test.deepEqual(validateSource.errors, null, 'conforms to schema')
     test.end()

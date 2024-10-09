@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-const fs = require('fs')
-const glob = require('glob')
-const yaml = require('js-yaml')
+import fs from 'fs'
+import { globSync } from 'glob'
+import yaml from 'js-yaml'
 
-const exerciseFiles = glob.sync('data/exercises/*.yml')
+const exerciseFiles = globSync('data/exercises/*.yml')
 for (const file of exerciseFiles) {
   const exercise = yaml.load(fs.readFileSync(file, 'utf8'))
   if (exercise.todo) {

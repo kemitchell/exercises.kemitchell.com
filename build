@@ -1,23 +1,23 @@
 #!/usr/bin/env node
-const slugify = require('slugify')
-const ejs = require('ejs')
-const fs = require('fs')
-const path = require('path')
-const glob = require('glob')
-const yaml = require('js-yaml')
+import slugify from 'slugify'
+import ejs from 'ejs'
+import { readFileSync, statSync, unlinkSync, mkdirSync, writeFileSync } from 'fs'
+import path from 'path'
+import { globSync } from 'glob'
+import yaml from 'js-yaml'
 
 function readYAML (file) {
-  return yaml.load(fs.readFileSync(file), { schema: yaml.JSON_SCHEMA })
+  return yaml.load(readFileSync(file), { schema: yaml.JSON_SCHEMA })
 }
 
 // Process exercises.
-const exerciseFiles = glob.sync('data/exercises/*.yml')
+const exerciseFiles = globSync('data/exercises/*.yml')
 const exercises = new Set()
 const arrays = ['progressions', 'sources', 'regressions', 'muscles', 'joints', 'tags', 'references', 'alternatives', 'mistakes', 'synonyms']
 let lastUpdated
 for (const file of exerciseFiles) {
   const exercise = readYAML(file)
-  const updated = exercise.updated = fs.statSync(file).mtime
+  const updated = exercise.updated = statSync(file).mtime
   if (lastUpdated === undefined) lastUpdated = updated
   else if (updated > lastUpdated) lastUpdated = updated
   exercise.slug = slugify(exercise.name)
@@ -76,11 +76,11 @@ for (const exercise of exercises.values()) {
 }
 
 // Process sources.
-const sourceFiles = glob.sync('data/sources/*.yml')
+const sourceFiles = globSync('data/sources/*.yml')
 const sources = new Set()
 for (const file of sourceFiles) {
   const source = readYAML(file)
-  source.updated = fs.statSync(file).mtime
+  source.updated = statSync(file).mtime
   source.slug = slugify(source.source + ' ' + source.title.toLowerCase())
   source.file = file
   // Add to sources of exercises.
@@ -95,18 +95,18 @@ for (const file of sourceFiles) {
 }
 
 const htmlFiles = []
-  .concat(glob.sync(path.join('site', '*.html')))
-  .concat(glob.sync(path.join('site', 'sources', '*.html')))
+  .concat(globSync(path.join('site', '*.html')))
+  .concat(globSync(path.join('site', 'sources', '*.html')))
 for (const htmlFile of htmlFiles) {
-  fs.unlinkSync(htmlFile)
+  unlinkSync(htmlFile)
 }
-fs.mkdirSync(path.join('site', 'sources'), { recursive: true })
+mkdirSync(path.join('site', 'sources'), { recursive: true })
 
-const templateFiles = glob.sync('templates/*.html')
+const templateFiles = globSync('templates/*.html')
 const templates = {}
 for (const templateFile of templateFiles) {
   const basename = path.basename(templateFile, '.html')
-  templates[basename] = fs.readFileSync(templateFile, 'utf8')
+  templates[basename] = readFileSync(templateFile, 'utf8')
 }
 const views = ['./partials']
 
@@ -142,5 +142,5 @@ for (const redirect of redirects) {
 }
 
 function writeFile (file, text) {
-  fs.writeFileSync(file, text, { flag: 'wx' })
+  writeFileSync(file, text, { flag: 'wx' })
 }
