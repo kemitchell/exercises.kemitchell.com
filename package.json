@@ -10,7 +10,7 @@
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "standard": "^17.1.2",
-    "tape": "^5.8.1"
+    "tape": "^5.9.0"
   },
   "scripts": {
     "lint": "standard",
