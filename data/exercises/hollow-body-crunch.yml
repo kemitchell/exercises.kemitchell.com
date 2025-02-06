@@ -2,3 +2,5 @@ name: hollow body crunch
 type: dynamic
 tags:
 - abs
+muscles:
+  - rectus abdominis
