@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import slugify from 'slugify'
+import kemarkdown from 'kemarkdown'
 import ejs from 'ejs'
 import { readFileSync, statSync, unlinkSync, mkdirSync, writeFileSync } from 'fs'
 import path from 'path'
@@ -83,6 +84,7 @@ for (const file of sourceFiles) {
   source.updated = statSync(file).mtime
   source.slug = slugify(source.source + ' ' + source.title.toLowerCase())
   source.file = file
+  if (source.notes) source.notes = kemarkdown(source.notes)
   // Add to sources of exercises.
   for (const exerciseName of source.exercises) {
     const exercise = Array.from(exercises).find(exercise => exercise.name === exerciseName)

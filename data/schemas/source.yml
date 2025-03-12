@@ -4,9 +4,7 @@ properties:
       type: string
     type: array
   notes:
-    items:
-      type: string
-    type: array
+    type: string
   source:
     type: string
   title:

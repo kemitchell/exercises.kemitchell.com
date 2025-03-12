@@ -28,11 +28,7 @@
 
       <% if (locals.notes) { %>
       <h2 id=notes>notes</h2>
-      <ul>
-        <% for (const note of notes) { %>
-        <li><%= note %></li>
-        <% } %>
-      </ul>
+      <%- notes %>
       <% } %>
     </main>
 
