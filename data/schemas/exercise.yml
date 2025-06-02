@@ -53,33 +53,31 @@ properties:
     - type: string
     - items:
         enum:
+        - adductor magnus
         - biceps brachii
         - biceps femoris
         - brachialis
         - brachioradialis
         - calves
         - chest
-        - soleus
-        - adductor magnus
         - coracobrachialis
         - core
         - deltoid
-        - external oblique
+        - external obliques
         - flexor digiti minimi brevis
         - flexor digitorum profundus
         - flexor digitorum superficialis
         - flexor pollicis brevis
         - flexor pollicis longus
         - glutes
-        - spinal erectors
         - gluteus maximus
         - gluteus medius
         - gluteus minimus
         - hamstrings
         - hip flexors
-        - infraspinatus
-        - internal oblique
         - iliacus
+        - infraspinatus
+        - internal obliques
         - latissimus dorsi
         - levator scapulae
         - pectoralis major
@@ -93,9 +91,11 @@ properties:
         - semimembranosus
         - semitendinosus
         - shoulders
+        - soleus
+        - spinal erectors
         - teres major
         - teres minor
-        - transverse abdominis
+        - transversus abdominis
         - trapezius
         - triceps brachii
       minItems: 1
