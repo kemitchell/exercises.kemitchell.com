@@ -1,0 +1,7 @@
+# An array of arrays of names for a muscle.
+# If any name is used in an exercise,
+# it's replaced by the first name in the list.
+- - transversus abdominis
+  - transverse abdominal muscle
+  - transverse abdominis
+  - transveralis

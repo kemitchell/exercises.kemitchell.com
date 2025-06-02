@@ -11,6 +11,8 @@ function readYAML (file) {
   return yaml.load(readFileSync(file), { schema: yaml.JSON_SCHEMA })
 }
 
+const muscleSynonyms = readYAML('muscle-synonyms.yml')
+
 // Process exercises.
 const exerciseFiles = globSync('data/exercises/*.yml')
 const exercises = new Set()
@@ -44,6 +46,19 @@ for (const exercise of exercises.values()) {
   }
   inherit('muscles')
   inherit('joints')
+
+  // Apply muscle aliases.
+  if (exercise.muscles) {
+    for (let index = 0; index < exercise.muscles.length; index++) {
+      const muscle = exercise.muscles[index]
+      for (const list of muscleSynonyms) {
+        if (list.includes(muscle)) {
+          muscles[index] = list[0]
+          break
+        }
+      }
+    }
+  }
 
   // Create regressions links.
   for (const progressionName of exercise.progressions) {
