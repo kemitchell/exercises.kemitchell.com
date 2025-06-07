@@ -1,5 +1,8 @@
 name: standing calf raise
 type: dynamic
+movements:
+- plantar flexion
+- ankle extension
 tags:
 - legs
 cues:
@@ -10,4 +13,5 @@ cues:
 - control the decsent
 - don't bend knees ascending
 muscles:
-- calves
+- gastrocnemius
+- soleus
