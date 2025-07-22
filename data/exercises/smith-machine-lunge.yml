@@ -1,6 +1,6 @@
-name: walking lunge
+name: smith machine lunge
 type: dynamic
 muscles:
-  - glutes
+- glutes
 alternatives:
-  - walking lunge
+- walking lunge
