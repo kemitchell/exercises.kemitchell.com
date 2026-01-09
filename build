@@ -104,7 +104,10 @@ for (const file of sourceFiles) {
   const author = source.source
   if (author) {
     if (!authors.has(author)) authors.set(author, new Set())
-    authors.get(author).add(source)
+    authors.get(author).add({
+      title: source.title,
+      slug: source.slug
+    })
   }
   // Add to sources of exercises.
   for (const exerciseName of source.exercises) {
@@ -120,6 +123,7 @@ for (const file of sourceFiles) {
 const htmlFiles = []
   .concat(globSync(path.join('site', '*.html')))
   .concat(globSync(path.join('site', 'sources', '*.html')))
+  .concat(globSync(path.join('site', 'authors', '*.html')))
 for (const htmlFile of htmlFiles) {
   unlinkSync(htmlFile)
 }
