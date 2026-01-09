@@ -93,6 +93,7 @@ for (const exercise of exercises.values()) {
 
 // Process sources.
 const sourceFiles = globSync('data/sources/*.yml')
+const authors = new Map()
 const sources = new Set()
 for (const file of sourceFiles) {
   const source = readYAML(file)
@@ -100,6 +101,11 @@ for (const file of sourceFiles) {
   source.slug = slugify(source.source + ' ' + source.title.toLowerCase())
   source.file = file
   if (source.notes) source.notes = kemarkdown(source.notes)
+  const author = source.source
+  if (author) {
+    if (!authors.has(author)) authors.set(author, new Set())
+    authors.get(author).add(source)
+  }
   // Add to sources of exercises.
   for (const exerciseName of source.exercises) {
     const exercise = Array.from(exercises).find(exercise => exercise.name === exerciseName)
@@ -118,6 +124,7 @@ for (const htmlFile of htmlFiles) {
   unlinkSync(htmlFile)
 }
 mkdirSync(path.join('site', 'sources'), { recursive: true })
+mkdirSync(path.join('site', 'authors'), { recursive: true })
 
 const templateFiles = globSync('templates/*.html')
 const templates = {}
@@ -136,6 +143,11 @@ for (const exercise of exercises.values()) {
 for (const source of sources.values()) {
   const pagePath = path.join('site', 'sources', `${source.slug}.html`)
   writeFile(pagePath, ejs.render(templates.source, Object.assign({ file: source.file }, helpers, source), { views }))
+}
+
+for (const [author, sources] of authors.entries()) {
+  const pagePath = path.join('site', 'authors', `${slugify(author)}.html`)
+  writeFile(pagePath, ejs.render(templates.author, Object.assign({ author, sources }, helpers), { views }))
 }
 
 const indexFile = path.join('site', 'index.html')

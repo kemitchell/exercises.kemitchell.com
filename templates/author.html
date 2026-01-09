@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang=en-US>
+  <head>
+    <title><%= author %></title>
+    <%- include('meta.html') %>
+  </head>
+  <body>
+    <%- include('banner.html') %>
+    <%- include('nav.html') %>
+
+    <main role=main>
+      <h1><%= author %></h1>
+
+      <% if (locals.exercises) { %>
+      <ul>
+        <% for (const source of sources) { %>
+        <li>
+          <a href="/sources/<%= source.slug %>"><%= source.title %></a>
+        </li>
+        <% } %>
+      </ul>
+      <% } %>
+    </main>
+  </body>
+</html>
