@@ -1,25 +1,25 @@
 name: rowing machine
 type: dynamic
 tags:
-  - machine
+- machine
 cues:
-  - relaxed at catch
-  - shoulders before hips from catch
-  - shins vertical at catch
-  - grip loose at catch
-  - start drive by pushing legs, not pulling arms
-  - drive heels into the stretchers
-  - pull after hands clear knees
-  - pull to below ribcage, wrists flat
-  - return arms first, then body, then legs
+- relaxed at catch
+- shoulders before hips from catch
+- shins vertical at catch
+- grip loose at catch
+- start drive by pushing legs, not pulling arms
+- drive heels into the stretchers
+- pull after hands clear knees
+- pull to below ribcage, wrists flat
+- return arms first, then body, then legs
 mistakes:
-  - bent wrists
-  - bent arms at catch
-  - flare elbows at top
-  - lunge forward at catch
-  - lay back at catch
-  - lean too far back at end of drive (past 11 o'clock)
-  - bend knees too early in recovery (chain not level)
-  - rush the slide
-  - over-compress (shins beyond vertical)
-  - shooting the slide (extending legs without body)
+- bent wrists
+- bent arms at catch
+- flare elbows at top
+- lunge forward at catch
+- lay back at catch
+- lean too far back at end of drive (past 11 o'clock)
+- bend knees too early in recovery (chain not level)
+- rush the slide
+- over-compress (shins beyond vertical)
+- shooting the slide (extending legs without body)
