@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "ejs": "^4.0.1",
-    "glob": "^11.0.3",
+    "glob": "^13.0.2",
     "js-yaml": "^4.1.0",
     "slugify": "^1.6.6"
   },
