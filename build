@@ -12,6 +12,7 @@ function readYAML (file) {
 }
 
 const muscleSynonyms = readYAML('muscle-synonyms.yml')
+const muscleGroups = readYAML('muscle-groups.yml')
 
 // Process exercises.
 const exerciseFiles = globSync('data/exercises/*.yml')
@@ -46,6 +47,22 @@ for (const exercise of exercises.values()) {
   }
   inherit('muscles')
   inherit('joints')
+
+  // Expand muscle groups.
+  if (exercise.muscles) {
+    const toRemove = []
+    for (let index = 0; index < exercise.muscles.length; index++) {
+      const muscle = exercise.muscles[index]
+      if (Object.hasOwn(muscleGroups, muscle)) {
+        const expansion = muscleGroups[muscle]
+        toRemove.push(index)
+        exercise.muscles.push(...expansion)
+      }
+    }
+    for (const index of toRemove) {
+      exercise.muscles.splice(index, 1)
+    }
+  }
 
   // Apply muscle aliases.
   if (exercise.muscles) {
