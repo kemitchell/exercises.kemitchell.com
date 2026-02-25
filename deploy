@@ -7,7 +7,7 @@ fi
 ./build | tee build.log
 ./tidy
 rsync \
-  --out-format "%n" k\
+  --out-format "%n" \
   --recursive \
   --checksum \
   --copy-dirlinks \
