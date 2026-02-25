@@ -6,4 +6,11 @@ if [ ! -d node_modules ]; then
 fi
 ./build | tee build.log
 ./tidy
-rsync -a --delete site/ "$SITE:/var/www/$SITE"
+rsync \
+  --out-format "%n" k\
+  --recursive \
+  --checksum \
+  --copy-dirlinks \
+  --copy-links \
+  --delete \
+  site/ "$SITE:/var/www/$SITE"
