@@ -18,7 +18,7 @@
           <ul>
             <% for (const muscle of muscles.values()) { %>
             <li>
-              <a href="/muscles/<%= slugify(muscle) %>"><%= muscle %></a>
+              <a href="/muscles#<%= slugify(muscle) %>"><%= muscle %></a>
             </li>
             <% } %>
           </ul>
