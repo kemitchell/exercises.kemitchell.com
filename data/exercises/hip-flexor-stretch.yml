@@ -1,5 +1,7 @@
 name: hip flexor stretch
 type: static
+tags:
+  - stretch
 muscles:
 - hip flexors
 - psoas
