@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang=en-US>
+  <head>
+    <title>muscle groups</title>
+    <%- include('meta.html') %>
+  </head>
+  <body>
+    <%- include('banner.html') %>
+    <%- include('nav.html') %>
+
+    <main role=main>
+      <h2>muscle groups/h2>
+
+      <ul>
+        <% for (const [group, muscles] of Object.entries(muscleGroups)) { %>
+        <li id="<%= slugify(group) %>">
+          <%= group %>
+          <ul>
+            <% for (const muscle of muscles.values()) { %>
+            <li>
+              <a href="/muscles/<%= slugify(muscle) %>"><%= muscle %></a>
+            </li>
+            <% } %>
+          </ul>
+        </li>
+        <% } %>
+      </ul>
+    </main>
+
+    <footer role=contentinfo>
+      <p class=updated>last updated <%= updated.toISOString() %></p>
+    </footer>
+  </body>
+</html>

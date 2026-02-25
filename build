@@ -177,6 +177,9 @@ writeFile(indexFile, ejs.render(templates.index, Object.assign({}, helpers, { ex
 const musclesFile = path.join('site', 'muscles.html')
 writeFile(musclesFile, ejs.render(templates.muscles, Object.assign({}, helpers, { updated: lastUpdated, muscles }), { views }))
 
+const muscleGroupsFile = path.join('site', 'musclegroups.html')
+writeFile(muscleGroupsFile, ejs.render(templates.muscleGroups, Object.assign({}, helpers, { updated: lastUpdated, muscleGroups }), { views }))
+
 const jointsFile = path.join('site', 'joints.html')
 writeFile(jointsFile, ejs.render(templates.joints, Object.assign({}, helpers, { updated: lastUpdated, joints }), { views }))
 
