@@ -10,7 +10,5 @@ rsync \
   --out-format "%n" \
   --recursive \
   --checksum \
-  --copy-dirlinks \
-  --copy-links \
   --delete \
   site/ "$SITE:/var/www/$SITE"
