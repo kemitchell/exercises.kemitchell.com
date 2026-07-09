@@ -10,7 +10,7 @@
   "devDependencies": {
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
-    "kemarkdown": "^5.0.0",
+    "kemarkdown": "^6.0.1",
     "standard": "^17.1.2"
   },
   "scripts": {
