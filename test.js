@@ -4,7 +4,7 @@ import { readFileSync } from 'fs'
 import { globSync } from 'glob'
 import test from 'node:test'
 import assert from 'node:assert'
-import yaml from 'js-yaml'
+import * as yaml from 'js-yaml'
 
 const ajv = new AJV()
 addFormats(ajv)
