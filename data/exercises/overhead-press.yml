@@ -1,9 +1,9 @@
 name: overhead press
 type: dynamic
 synonyms:
-- military press
-- shoulder press
-- strict press
+  - military press
+  - shoulder press
+  - strict press
 tags:
-- barbell
-- big-five
+  - barbell
+  - big-five

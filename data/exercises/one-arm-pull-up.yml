@@ -3,9 +3,9 @@ todo: true
 sides: separate
 type: dynamic
 tags:
-- arms
-- back
-- pull
+  - arms
+  - back
+  - pull
 chain: closed
 cues:
-- one arm down by side
+  - one arm down by side

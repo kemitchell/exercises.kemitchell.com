@@ -2,9 +2,9 @@ name: band-assisted pistol squat
 type: dynamic
 sides: separate
 tags:
-- legs
-- push
+  - legs
+  - push
 cues:
-- keep knee from caving in, tracking over midfoot
+  - keep knee from caving in, tracking over midfoot
 progressions:
-- pistol squat
+  - pistol squat

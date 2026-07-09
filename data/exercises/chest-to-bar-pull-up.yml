@@ -1,10 +1,10 @@
 name: chest-to-bar pull-up
 type: dynamic
 tags:
-- arms
-- back
-- pull
+  - arms
+  - back
+  - pull
 cues:
-- pronate arms
+  - pronate arms
 progressions:
-- hip-to-bar pull-up
+  - hip-to-bar pull-up

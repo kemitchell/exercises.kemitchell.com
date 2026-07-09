@@ -1,7 +1,7 @@
 name: front lever
 type: static
 tags:
-- lever
+  - lever
 cues:
-- legs straight
-- extend hips
+  - legs straight
+  - extend hips

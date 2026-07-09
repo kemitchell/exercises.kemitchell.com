@@ -1,13 +1,13 @@
 name: diamond push-up
 type: dynamic
 tags:
-- arms
-- chest
-- core
-- push
+  - arms
+  - chest
+  - core
+  - push
 cues:
-- brace core
-- baseball cap backwards
-- posterior pelvic tilt
-- full shoulder extension
-- pause at top
+  - brace core
+  - baseball cap backwards
+  - posterior pelvic tilt
+  - full shoulder extension
+  - pause at top

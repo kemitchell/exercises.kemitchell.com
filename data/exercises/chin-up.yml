@@ -2,13 +2,13 @@ name: chin-up
 type: dynamic
 chain: closed
 tags:
-- arms
-- chest
-- core
-- military
-- pull
-- ranger-physical-fitness-test
+  - arms
+  - chest
+  - core
+  - military
+  - pull
+  - ranger-physical-fitness-test
 cues:
-- hands supinated
+  - hands supinated
 alternatives:
-- pull-up
+  - pull-up

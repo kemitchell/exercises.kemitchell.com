@@ -1,7 +1,7 @@
 name: dragon flag
 type: dynamic
 tags:
-- core
+  - core
 cues:
-- keep knees and hips straight
-- lift glutes off the floor
+  - keep knees and hips straight
+  - lift glutes off the floor

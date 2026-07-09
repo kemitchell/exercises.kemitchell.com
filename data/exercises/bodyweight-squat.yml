@@ -1,24 +1,24 @@
 name: bodyweight squat
 type: dynamic
 muscles:
-- quadriceps femoris
-- adductor magnus
-- gluteus maximus
-- soleus
+  - quadriceps femoris
+  - adductor magnus
+  - gluteus maximus
+  - soleus
 synonyms:
-- Asian squat
-- slavic squat
+  - Asian squat
+  - slavic squat
 joints:
-- ankle
-- hip
-- knee
+  - ankle
+  - hip
+  - knee
 tags:
-- legs
-- push
+  - legs
+  - push
 cues:
-- calves touch thighs at bottom
-- heels flat on ground
-- back straight
-- knees pointed out
+  - calves touch thighs at bottom
+  - heels flat on ground
+  - back straight
+  - knees pointed out
 progressions:
-- shrimp squat
+  - shrimp squat

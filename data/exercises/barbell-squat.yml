@@ -1,6 +1,6 @@
 name: barbell squat
 type: dynamic
 tags:
-- barbell
-- big-five
-- powerlifting
+  - barbell
+  - big-five
+  - powerlifting

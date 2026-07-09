@@ -1,12 +1,12 @@
 name: hanging leg raise
 type: dynamic
 cues:
-- legs as high as possible
+  - legs as high as possible
 tags:
-- abs
+  - abs
 muscles:
-- hip flexors
-- external obliques
-- internal obliques
-- transversus abdominis
-- rectus abdominis
+  - hip flexors
+  - external obliques
+  - internal obliques
+  - transversus abdominis
+  - rectus abdominis

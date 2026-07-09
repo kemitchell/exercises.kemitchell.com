@@ -1,10 +1,10 @@
 name: ring rollout
 type: dynamic
 tags:
-- core
+  - core
 cues:
-- palms supine
-- posterior pelvic tilt
-- glutes tense
-- abs tense
-- arms straight
+  - palms supine
+  - posterior pelvic tilt
+  - glutes tense
+  - abs tense
+  - arms straight

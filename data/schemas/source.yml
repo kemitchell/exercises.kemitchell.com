@@ -13,6 +13,6 @@ properties:
     format: url
     type: string
 required:
-- title
-- source
+  - title
+  - source
 type: object

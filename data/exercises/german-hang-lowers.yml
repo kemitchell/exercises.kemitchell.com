@@ -1,8 +1,8 @@
 name: german hang lowers
 type: dynamic
 tags:
-- levers
+  - levers
 cues:
-- shoulders retracted
+  - shoulders retracted
 progressions:
-- tucked back lever
+  - tucked back lever

@@ -1,12 +1,12 @@
 name: tucked front lever
 type: static
 tags:
-- lever
+  - lever
 cues:
-- shoulders retracted
-- shoulders depressed
-- arms straight
-- knees to chest
-- heels to bottom
+  - shoulders retracted
+  - shoulders depressed
+  - arms straight
+  - knees to chest
+  - heels to bottom
 progressions:
-- flat tucked front lever
+  - flat tucked front lever

@@ -8,8 +8,8 @@ properties:
     type: array
   chain:
     enum:
-    - open
-    - closed
+      - open
+      - closed
   cues:
     items:
       minLength: 1
@@ -34,14 +34,14 @@ properties:
     type: object
   joints:
     oneOf:
-    - type: string
-    - items:
-        enum:
-        - ankle
-        - knee
-        - hip
-      minItems: 1
-      type: array
+      - type: string
+      - items:
+          enum:
+            - ankle
+            - knee
+            - hip
+        minItems: 1
+        type: array
   mistakes:
     items:
       minLength: 1
@@ -55,59 +55,59 @@ properties:
       minLength: 1
   muscles:
     oneOf:
-    - type: string
-    - items:
-        enum:
-        - adductor magnus
-        - biceps brachii
-        - biceps femoris
-        - brachialis
-        - brachioradialis
-        - calves
-        - chest
-        - coracobrachialis
-        - core
-        - deltoid
-        - external obliques
-        - flexor digiti minimi brevis
-        - flexor digitorum profundus
-        - flexor digitorum superficialis
-        - flexor pollicis brevis
-        - flexor pollicis longus
-        - gastrocnemius
-        - glutes
-        - gluteus maximus
-        - gluteus medius
-        - gluteus minimus
-        - hamstrings
-        - hip flexors
-        - iliacus
-        - infraspinatus
-        - internal obliques
-        - latissimus dorsi
-        - levator scapulae
-        - pectoralis major
-        - pectoralis minor
-        - psoas
-        - quadriceps femoris
-        - rectus abdominis
-        - rectus femoris
-        - rhomboids
-        - sartorius
-        - semimembranosus
-        - semitendinosus
-        - shoulders
-        - soleus
-        - spinal erectors
-        - teres major
-        - teres minor
-        - tibialis anterior
-        - tibialis posterior
-        - transversus abdominis
-        - trapezius
-        - triceps brachii
-      minItems: 1
-      type: array
+      - type: string
+      - items:
+          enum:
+            - adductor magnus
+            - biceps brachii
+            - biceps femoris
+            - brachialis
+            - brachioradialis
+            - calves
+            - chest
+            - coracobrachialis
+            - core
+            - deltoid
+            - external obliques
+            - flexor digiti minimi brevis
+            - flexor digitorum profundus
+            - flexor digitorum superficialis
+            - flexor pollicis brevis
+            - flexor pollicis longus
+            - gastrocnemius
+            - glutes
+            - gluteus maximus
+            - gluteus medius
+            - gluteus minimus
+            - hamstrings
+            - hip flexors
+            - iliacus
+            - infraspinatus
+            - internal obliques
+            - latissimus dorsi
+            - levator scapulae
+            - pectoralis major
+            - pectoralis minor
+            - psoas
+            - quadriceps femoris
+            - rectus abdominis
+            - rectus femoris
+            - rhomboids
+            - sartorius
+            - semimembranosus
+            - semitendinosus
+            - shoulders
+            - soleus
+            - spinal erectors
+            - teres major
+            - teres minor
+            - tibialis anterior
+            - tibialis posterior
+            - transversus abdominis
+            - trapezius
+            - triceps brachii
+        minItems: 1
+        type: array
   name:
     minLength: 1
     type: string
@@ -119,8 +119,8 @@ properties:
     type: array
   sides:
     enum:
-    - combined
-    - separate
+      - combined
+      - separate
   synonyms:
     items:
       minLength: 1
@@ -136,9 +136,9 @@ properties:
     type: boolean
   type:
     enum:
-    - static
-    - dynamic
+      - static
+      - dynamic
 required:
-- name
-- type
+  - name
+  - type
 type: object

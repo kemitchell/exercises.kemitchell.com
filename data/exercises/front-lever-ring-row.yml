@@ -1,8 +1,8 @@
 name: front lever ring row
 type: dynamic
 tags:
-- arms
-- back
-- pull
+  - arms
+  - back
+  - pull
 cues:
-- feet off ground
+  - feet off ground

@@ -1,15 +1,15 @@
 name: bench press
 type: dynamic
 tags:
-- barbell
-- big-five
-- powerlifting
+  - barbell
+  - big-five
+  - powerlifting
 cues:
-- feet flat on floor
-- lower back slightly arched
-- racked back over the forehead
-- bar traves a curved path down to the solar plexus
-- hold breath and brace core before lowering
-- exhale when pushing
+  - feet flat on floor
+  - lower back slightly arched
+  - racked back over the forehead
+  - bar traves a curved path down to the solar plexus
+  - hold breath and brace core before lowering
+  - exhale when pushing
 muscles:
-- pectoralis major
+  - pectoralis major

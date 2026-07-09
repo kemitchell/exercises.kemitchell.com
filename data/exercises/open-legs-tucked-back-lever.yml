@@ -1,11 +1,11 @@
 name: open legs tucked back lever
 type: static
 tags:
-- levers
+  - levers
 cues:
-- spread knees apart
+  - spread knees apart
 goal:
   sets: 5
   seconds: 12
 progressions:
-- straddle back lever
+  - straddle back lever

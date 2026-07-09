@@ -1,11 +1,11 @@
 name: ring fly
 type: dynamic
 tags:
-- arms
-- chest
-- core
-- push
+  - arms
+  - chest
+  - core
+  - push
 cues:
-- back straight
-- posterior pelvic tilt
-- arms straight
+  - back straight
+  - posterior pelvic tilt
+  - arms straight

@@ -2,7 +2,7 @@ source: Layne Norton
 title: Layne Norton's Squat Tutorial
 url: https://www.youtube.com/watch?v=t2b8UdqmlFs
 exercises:
-- barbell squat
+  - barbell squat
 notes: |
   - equipment
   - likes knee sleeves more than wraps for consistency and convenience

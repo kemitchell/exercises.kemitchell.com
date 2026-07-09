@@ -1,13 +1,13 @@
 name: toes up back lever
 type: static
 tags:
-- levers
+  - levers
 cues:
-- bend knees
-- plantarflex ankles
-- shins and toes pointing skyward
+  - bend knees
+  - plantarflex ankles
+  - shins and toes pointing skyward
 goal:
   sets: 5
   seconds: 12
 progressions:
-- back lever
+  - back lever

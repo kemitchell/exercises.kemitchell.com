@@ -1,11 +1,11 @@
 name: situp
 type: dynamic
 tags:
-- apft
-- core
-- military
-- ranger-physical-fitness-test
+  - apft
+  - core
+  - military
+  - ranger-physical-fitness-test
 cues:
-- full range of motion
-- all the way up
-- all the way down
+  - full range of motion
+  - all the way up
+  - all the way down

@@ -1,7 +1,7 @@
 name: eccentric pistol squat
 type: dynamic
 tags:
-- legs
-- push
+  - legs
+  - push
 progressions:
-- pistol squat
+  - pistol squat

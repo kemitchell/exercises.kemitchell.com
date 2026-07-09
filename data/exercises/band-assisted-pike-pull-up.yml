@@ -1,13 +1,13 @@
 name: band-assisted pike pull-up
 synonyms:
-- band-assisted l-sit pull-up
+  - band-assisted l-sit pull-up
 type: dynamic
 chain: closed
 tags:
-- arms
-- back
-- pull
+  - arms
+  - back
+  - pull
 cues:
-- lower slowly
+  - lower slowly
 progressions:
-- pike pull-up
+  - pike pull-up

@@ -1,9 +1,9 @@
 name: lat pulldown
 type: dynamic
 tags:
-- arms
-- back
-- machine
-- weights
+  - arms
+  - back
+  - machine
+  - weights
 cues:
-- back straight
+  - back straight

@@ -1,8 +1,8 @@
 name: sumo deadlift
 type: dynamic
 tags:
-- barbell
+  - barbell
 muscles:
-- gluteus maximus
-- gluteus minimus
-- biceps femoris
+  - gluteus maximus
+  - gluteus minimus
+  - biceps femoris

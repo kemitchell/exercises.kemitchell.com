@@ -2,9 +2,9 @@ source: Fitness FAQs
 title: The Most Effective Bodyweight Leg Exercise
 url: https://www.youtube.com/watch?v=JX4bA2rT10M
 exercises:
-- natural leg extension
-- couch stretch
-- hip extended couch stretch
+  - natural leg extension
+  - couch stretch
+  - hip extended couch stretch
 notes: |
   - helps stretch tight quads and hip flexors
   - esp rectus femoris

@@ -1,6 +1,6 @@
 name: bent-knee dragon flag
 type: dynamic
 tags:
-- core
+  - core
 progressions:
-- dragon flag
+  - dragon flag

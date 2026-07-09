@@ -1,6 +1,6 @@
 name: Arnold press
 type: dynamic
 tags:
-- dumbbell
+  - dumbbell
 muscles:
-- deltoid
+  - deltoid

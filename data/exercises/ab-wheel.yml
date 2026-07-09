@@ -1,8 +1,8 @@
 name: ab wheel
 type: dynamic
 tags:
-- core
+  - core
 cues:
-- keep hips extended during working portion
+  - keep hips extended during working portion
 alternatives:
-- ring rollout
+  - ring rollout

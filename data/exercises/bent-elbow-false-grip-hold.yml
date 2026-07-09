@@ -1,9 +1,9 @@
 name: bent elbow false grip hold
 type: static
 tags:
-- arms
-- hold
+  - arms
+  - hold
 cues:
-- bend elbows ninety degrees
+  - bend elbows ninety degrees
 progressions:
-- false grip hold
+  - false grip hold

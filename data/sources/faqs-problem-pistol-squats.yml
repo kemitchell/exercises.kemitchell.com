@@ -2,11 +2,11 @@ source: Fitness FAQs
 title: The Problem with Pistol Squats
 url: https://www.youtube.com/watch?v=d7SLe_ubwy4
 exercises:
-- band-assisted pistol squat
-- one-legged box squat
-- step-up
-- eccentric pistol squat
-- roll-assisted pistol squat
-- pistol squat
+  - band-assisted pistol squat
+  - one-legged box squat
+  - step-up
+  - eccentric pistol squat
+  - roll-assisted pistol squat
+  - pistol squat
 notes: |
   - problem often ankle mobility

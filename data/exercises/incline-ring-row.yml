@@ -1,12 +1,12 @@
 name: incline ring row
 type: dynamic
 tags:
-- arms
-- back
-- pull
+  - arms
+  - back
+  - pull
 muscles: ring row
 cues:
-- body start at about 45 degrees
+  - body start at about 45 degrees
 progressions:
-- ring row
-- bulgarian ring row
+  - ring row
+  - bulgarian ring row

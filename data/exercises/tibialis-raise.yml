@@ -1,7 +1,7 @@
 name: tibialis raise
 type: dynamic
 tags:
-- legs
-- isolation
+  - legs
+  - isolation
 muscles:
-- tibialis anterior
+  - tibialis anterior

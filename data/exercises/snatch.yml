@@ -1,5 +1,5 @@
 name: snatch
 type: dynamic
 tags:
-- barbell
-- olympic
+  - barbell
+  - olympic

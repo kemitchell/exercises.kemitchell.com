@@ -1,17 +1,17 @@
 name: standing calf raise
 type: dynamic
 movements:
-- plantar flexion
-- ankle extension
+  - plantar flexion
+  - ankle extension
 tags:
-- legs
+  - legs
 cues:
-- all the way down to limit
-- pause at bottom
-- all the way up to peak contraction, on balls of feet
-- take your time
-- control the decsent
-- don't bend knees ascending
+  - all the way down to limit
+  - pause at bottom
+  - all the way up to peak contraction, on balls of feet
+  - take your time
+  - control the decsent
+  - don't bend knees ascending
 muscles:
-- gastrocnemius
-- soleus
+  - gastrocnemius
+  - soleus

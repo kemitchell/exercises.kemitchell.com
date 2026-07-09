@@ -1,9 +1,9 @@
 name: l-sit
 type: static
 tags:
-- abs
+  - abs
 muscles:
-- rectus abdominis
-- hip flexors
-- quadriceps femoris
-- rectus femoris
+  - rectus abdominis
+  - hip flexors
+  - quadriceps femoris
+  - rectus femoris
