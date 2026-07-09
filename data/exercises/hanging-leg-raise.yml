@@ -2,6 +2,8 @@ name: hanging leg raise
 type: dynamic
 cues:
 - legs as high as possible
+tags:
+- abs
 muscles:
 - hip flexors
 - external obliques
