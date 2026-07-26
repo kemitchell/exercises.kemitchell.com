@@ -4,12 +4,12 @@ import { readFileSync } from 'fs'
 import { globSync } from 'glob'
 import test from 'node:test'
 import assert from 'node:assert'
-import * as yaml from 'js-yaml'
+import { load } from 'js-yaml'
 
 const ajv = new AJV()
 addFormats(ajv)
 
-const exerciseSchema = yaml.load(readFileSync('./data/schemas/exercise.yml', 'utf8'))
+const exerciseSchema = load(readFileSync('./data/schemas/exercise.yml', 'utf8'))
 const validateExercise = ajv.compile(exerciseSchema)
 
 const recordFiles = globSync('data/exercises/*.yml')
@@ -18,7 +18,7 @@ for (const recordFile of recordFiles) {
   test(recordFile, test => {
     let parsed
     assert.doesNotThrow(() => {
-      parsed = yaml.load(readFileSync(recordFile, 'utf8'))
+      parsed = load(readFileSync(recordFile, 'utf8'))
     }, 'valid YAML')
     exercises.set(parsed.name, parsed)
     validateExercise(parsed)
@@ -37,14 +37,14 @@ test('progressions', async suite => {
   }
 })
 
-const sourceSchema = yaml.load(readFileSync('./data/schemas/source.yml', 'utf8'))
+const sourceSchema = load(readFileSync('./data/schemas/source.yml', 'utf8'))
 const validateSource = ajv.compile(sourceSchema)
 
 const sourceFiles = globSync('data/sources/*.yml')
 for (const sourceFile of sourceFiles) {
   let parsed
   test(sourceFile, test => {
-    parsed = yaml.load(readFileSync(sourceFile, 'utf8'))
+    parsed = load(readFileSync(sourceFile, 'utf8'))
     validateSource(parsed)
     assert.deepEqual(validateSource.errors, null, 'conforms to schema')
   })

@@ -5,10 +5,10 @@ import ejs from 'ejs'
 import { readFileSync, statSync, unlinkSync, mkdirSync, writeFileSync } from 'fs'
 import path from 'path'
 import { globSync } from 'glob'
-import * as yaml from 'js-yaml'
+import { load, JSON_SCHEMA } from 'js-yaml'
 
 function readYAML (file) {
-  return yaml.load(readFileSync(file), { schema: yaml.JSON_SCHEMA })
+  return load(readFileSync(file), { schema: JSON_SCHEMA })
 }
 
 const muscleSynonyms = readYAML('muscle-synonyms.yml')
