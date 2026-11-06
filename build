@@ -2,9 +2,8 @@
 import slugify from 'slugify'
 import kemarkdown from 'kemarkdown'
 import ejs from 'ejs'
-import { readFileSync, statSync, unlinkSync, mkdirSync, writeFileSync } from 'fs'
+import { globSync, readFileSync, statSync, unlinkSync, mkdirSync, writeFileSync } from 'fs'
 import path from 'path'
-import { globSync } from 'glob'
 import { load, JSON_SCHEMA } from 'js-yaml'
 
 function readYAML (file) {
