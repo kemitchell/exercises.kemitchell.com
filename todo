@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 import fs from 'fs'
-import { globSync } from 'glob'
 import { load } from 'js-yaml'
 
-const exerciseFiles = globSync('data/exercises/*.yml')
+const exerciseFiles = fs.globSync('data/exercises/*.yml')
 for (const file of exerciseFiles) {
   const exercise = load(fs.readFileSync(file, 'utf8'))
   if (exercise.todo) {

@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import { load, dump } from 'js-yaml'
-import { readFileSync, writeFileSync } from 'fs'
-import { globSync } from 'glob'
+import { readFileSync, writeFileSync, globSync } from 'fs'
 
 for (const file of globSync('data/**/*.yml')) {
   const data = load(readFileSync(file, 'utf8'))

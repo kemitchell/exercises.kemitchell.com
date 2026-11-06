@@ -1,7 +1,6 @@
 import AJV from 'ajv'
 import addFormats from 'ajv-formats'
-import { readFileSync } from 'fs'
-import { globSync } from 'glob'
+import { readFileSync, globSync } from 'fs'
 import test from 'node:test'
 import assert from 'node:assert'
 import { load } from 'js-yaml'
