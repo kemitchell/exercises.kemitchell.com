@@ -15,4 +15,5 @@ properties:
 required:
   - title
   - source
+  - exercises
 type: object
