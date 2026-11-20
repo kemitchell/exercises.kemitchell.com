@@ -2,5 +2,6 @@ name: weighted body crunch
 type: dynamic
 tags:
   - abs
+  - weighted
 muscles:
   - rectus abdominis
