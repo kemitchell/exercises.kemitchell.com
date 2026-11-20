@@ -6,8 +6,5 @@ tags:
   - back
   - pull
 chain: closed
-regressions:
-  - weighted pull-up
-  - archer pull-up
 cues:
   - one arm down by side
