@@ -3,6 +3,7 @@ type: dynamic
 tags:
   - legs
   - push
+  - weighted
 cues:
   - hold weight out in front of body
 progressions:
