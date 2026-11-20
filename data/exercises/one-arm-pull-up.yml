@@ -1,5 +1,4 @@
 name: one-arm pull-up
-todo: true
 sides: separate
 type: dynamic
 tags:
@@ -7,5 +6,8 @@ tags:
   - back
   - pull
 chain: closed
+regressions:
+  - weighted pull-up
+  - archer pull-up
 cues:
   - one arm down by side
